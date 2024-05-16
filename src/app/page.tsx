@@ -2,8 +2,11 @@ import { titleFont } from "@/config/fonts";
 
 export default function Home() {
   return (
-    <main>
-      <h1 className={titleFont.className}>Home</h1>
-    </main>
+    <section className="bg-violet-500 min-h-screen">
+      <div className="bg-red-300 ">
+
+      </div>
+      <h1>Hola</h1>
+		</section>
   );
 }
