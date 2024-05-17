@@ -2,8 +2,8 @@ import { titleFont } from "@/config/fonts";
 
 export default function About() {
   return (
-    <main>
+    <div>
       <h1 className={titleFont.className}>About page</h1>
-    </main>
+    </div>
   );
 }

@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { inter } from "@/config/fonts";
 
 import "./globals.css";
+import { inter } from "@/config/fonts";
 
-// `NextUIProvider` component
-import { NextUIProvider } from "@nextui-org/react";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "ImDamianDev",
@@ -17,10 +16,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <NextUIProvider>
-        <body className={inter.className}>{children}</body>
-      </NextUIProvider>
+    <html lang="es">
+      <body className={inter.className}>
+        <Providers>
+          {children}
+        </Providers>
+      </body>
     </html>
   );
 }
