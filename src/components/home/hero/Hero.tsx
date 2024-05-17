@@ -11,9 +11,9 @@ export const Hero = () => {
 
     useEffect(() => {
         const typed = new Typed(typedRef.current, {
-            strings: ['Desarrollador web'],
-            typeSpeed: 85,
-            backSpeed: 85,
+            strings: ['Desarrollador web.'],
+            typeSpeed: 110,
+            backSpeed: 110,
             loop: true
         });
 
@@ -24,9 +24,31 @@ export const Hero = () => {
 
 
     return (
-        <div id="hero-section" className='min-h-screen bg-slate-600 flex flex-col md:flex-row justify-center'>
+        <div id="hero" className='min-h-screen flex flex-col-reverse md:flex-row justify-center'>
 
-            <div className='flex items-center p-5'>
+            <div className="grid content-center p-5">
+
+                <div>
+                    <p className='text-2xl mb-1 pl-1 font-semibold text-primary-700'>
+                        Hola, mi nombre es
+                    </p>
+                    <h1 className="text-5xl lg:text-7xl font-bold antialiased">
+                        Damián Cortés
+                    </h1>
+                </div>
+
+                <div className="text-primary-700 pl-1 mt-7 text-2xl lg:text-3xl font-semibold antialiased">
+                    <span ref={typedRef}>
+                    </span>
+                </div>
+
+                <div>
+
+                </div>
+
+            </div>
+
+            <div className='flex items-center p-7'>
                 <Image
                     src='/profile_picture/profile_picture_imdamiandev.png'
                     alt="hero-image-imdamiandev"
@@ -34,22 +56,6 @@ export const Hero = () => {
                     height={500}
                     className='rounded-full'
                 />
-            </div>
-
-
-            <div className="grid content-center p-5">
-
-                <div>
-                    <h1 className="text-5xl md:text-5xl mb-10 font-bold antialiased">
-                        Hola, me llamó Damián.
-                    </h1>
-                </div>
-
-                <div className="text-white">
-                    <span ref={typedRef}>
-                    </span>
-                </div>
-
             </div>
         </div>
     )
