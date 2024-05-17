@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.pulse {
+    animation-name: pulse;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes pulse {
+    0%{
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    50% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
