@@ -51,7 +51,7 @@ export const Hero = () => {
 
             <div className='basis-1/4 md:basis-2/4 lg:basis-auto relative flex items-center px-20 md:px-0'>
                 <Image
-                    src='/profile_picture/profile_picture_imdamiandev.png'
+                    src='/profile-picture/profile-picture.png'
                     alt="hero-image-imdamiandev"
                     width={500}
                     height={500}
