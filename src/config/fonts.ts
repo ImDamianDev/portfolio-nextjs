@@ -1,8 +1,8 @@
-import { Inter, Montserrat_Alternates } from "next/font/google";
+import { Bitter, Inter } from "next/font/google";
 
 export const inter = Inter({ subsets: ["latin"] });
 
-export const titleFont = Montserrat_Alternates({
+export const titleFont = Bitter({
     subsets: ['latin'],
-    weight: ['500', '700']
+    weight: ['400', '500', '600', '700']
 })
