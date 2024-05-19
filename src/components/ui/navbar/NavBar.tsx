@@ -4,6 +4,7 @@ import { useState } from "react";
 import { titleFont } from "@/config/fonts";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
 import { siteConfig } from "@/config/site";
+import { ThemeSwitch } from "../theme-switch/ThemeSwitch";
 
 export const NavBar = () => {
 
@@ -12,10 +13,11 @@ export const NavBar = () => {
     const { navItems } = siteConfig;
 
     return (
-        <Navbar isBlurred={false} maxWidth="full" className="bg-slate-100 shadow-sm" onMenuOpenChange={setIsMenuOpen}>
+        <Navbar isBlurred={false} maxWidth="full" className="shadow-sm" onMenuOpenChange={setIsMenuOpen}>
             <NavbarBrand>
                 <p className={`${titleFont.className} text-2xl font-bold text-inherit`}>ImDamianDev</p>
             </NavbarBrand>
+            <ThemeSwitch />
             <NavbarMenuToggle
                 aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                 className="sm:hidden"
@@ -38,7 +40,7 @@ export const NavBar = () => {
                 </NavbarItem>
 
             </NavbarContent>
-            <NavbarMenu className="bg-slate-100 max-h-56 max-w-50 justify-center gap-4 pt-0 rounded-b-medium shadow-sm">
+            <NavbarMenu className="max-h-56 max-w-50 justify-center gap-4 pt-0 rounded-b-medium shadow">
                 {navItems.map((item) => (
                     <NavbarMenuItem key={`${item}`} className="flex justify-end">
                         <Link
