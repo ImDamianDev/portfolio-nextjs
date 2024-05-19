@@ -27,7 +27,7 @@ export const Hero = () => {
 
             <div className='absolute w-20 h-20 rounded-full bg-primary-300 top-20 left-10 md:w-28 md:h-28 md:top-32 lg:left-20 lg:top-32 xl:left-40 xl:top-40 2xl:w-48 2xl:h-48 transition-all opacity-60 -z-10 pulse' />
 
-            <div className="grid content-center text-center md:text-left p-5 h-fit w-full md:w-auto">
+            <div className="grid content-center text-center md:text-left p-5 h-fit w-full md:w-auto lg:mr-5">
 
                 <div>
                     <p className={`${titleFont.className} text-xl lg:text-3xl mb-1 pl-0.5 font-semibold text-primary-700`}>
@@ -49,7 +49,7 @@ export const Hero = () => {
 
             </div>
 
-            <div className='basis-1/4 md:basis-2/4 lg:basis-auto relative flex items-center px-20 md:px-0'>
+            <div className='basis-1/4 md:basis-2/4 lg:basis-auto relative flex items-center px-14 md:px-0 -mt-36 md:mt-0'>
                 <Image
                     src='/profile-picture/profile-picture.png'
                     alt="hero-image-imdamiandev"
