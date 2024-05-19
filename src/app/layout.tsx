@@ -4,6 +4,7 @@ import "./globals.css";
 import { inter } from "@/config/fonts";
 
 import { Providers } from "./providers";
+import { Footer, NavBar } from "@/components";
 
 export const metadata: Metadata = {
   title: "ImDamianDev",
@@ -19,7 +20,9 @@ export default function RootLayout({
     <html lang="es">
       <body className={inter.className}>
         <Providers>
+          <NavBar />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>
