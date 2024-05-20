@@ -13,41 +13,43 @@ export const NavBar = () => {
     const { navItems } = siteConfig;
 
     return (
-        <Navbar isBlurred={false} maxWidth="full" className="shadow-sm" onMenuOpenChange={setIsMenuOpen}>
+        <Navbar isBlurred={false} maxWidth="full" className="shadow" onMenuOpenChange={setIsMenuOpen}>
             <NavbarBrand>
-                <p className={`${titleFont.className} text-primary text-2xl font-bold text-inherit`}>ImDamian<span className="text-secondary">Dev</span></p>
+                <p className={`${titleFont.className} text-2xl font-bold`}>ImDamian<span className="text-secondary">Dev</span></p>
             </NavbarBrand>
             <ThemeSwitch />
             <NavbarMenuToggle
                 aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                 className="sm:hidden"
             />
-            <NavbarContent className="hidden sm:flex gap-5 text-primary font-semibold" justify="center">
+            <NavbarContent className="hidden sm:flex gap-5" justify="center">
                 <NavbarItem>
-                    <Link href="/about" className="text-lg ml-3 hover:scale-110 transition-all">
+                    <Link href="/about" className="text-lg ml-3 hover:scale-105 transition-all">
                         About
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link href="/proyects" className="text-lg ml-3 hover:scale-110 transition-all">
+                    <Link href="/proyects" className="text-lg ml-3 hover:scale-105 transition-all">
                         Proyects
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link href="/contact" className="text-lg ml-3 hover:scale-110 transition-all">
+                    <Link href="/contact" className="text-lg ml-3 hover:scale-105 transition-all">
                         Contact
                     </Link>
                 </NavbarItem>
 
             </NavbarContent>
-            <NavbarMenu className="max-h-56 max-w-50 justify-center gap-4 pt-0 rounded-b-medium shadow">
+            <NavbarMenu className="max-h-56 max-w-50 justify-center gap-y-5 pt-0 shadow-lg">
                 {navItems.map((item) => (
                     <NavbarMenuItem key={`${item}`} className="flex justify-end">
                         <Link
                             href={item.href}
                             size="lg"
+                            className="hover:scale-105 transition-all"
                         >
-                            <p className="text-2xl text-primary">
+                            <span className="text-secondary font-bold mr-1">_</ span>
+                            <p className="text-xl">
                                 {item.label}
                             </p>
                         </Link>

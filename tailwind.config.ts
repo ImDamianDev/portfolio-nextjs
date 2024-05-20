@@ -18,7 +18,7 @@ const config: Config = {
         light: {
           colors: {
             background: "#F7F7F7", // or DEFAULT
-            foreground: "#11181C", // or 50 to 900 DEFAULT
+            foreground: "#1B688D", // or 50 to 900 DEFAULT
             primary: {
               //... 50 to 900
               foreground: "#FFFFFF",
@@ -35,10 +35,10 @@ const config: Config = {
         dark: {
           colors: {
             background: "#1B688D", // or DEFAULT
-            foreground: "#ECEDEE", // or 50 to 900 DEFAULT
+            foreground: "#F7F7F7", // or 50 to 900 DEFAULT
             primary: {
               //... 50 to 900
-              foreground: "#FFFFFF",
+              foreground: "#F7F7F7",
               DEFAULT: "#F7F7F7",
             },
             secondary: {
