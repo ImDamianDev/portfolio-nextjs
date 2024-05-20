@@ -26,9 +26,9 @@ export const Hero = () => {
     return (
         <div id="hero" className='relative min-h-screen flex flex-col-reverse md:flex-row justify-center items-center'>
 
-            <div className='absolute w-20 h-20 rounded-full bg-secondary top-20 left-10 md:w-28 md:h-28 md:top-32 lg:left-20 lg:top-32 xl:left-40 xl:top-40 2xl:w-48 2xl:h-48 transition-all opacity-60 -z-10 pulse' />
+            <div className='absolute w-20 h-20 rounded-full bg-secondary top-28 left-10 md:w-28 md:h-28 md:top-32 lg:left-20 lg:top-32 xl:left-40 xl:top-40 2xl:w-48 2xl:h-48 transition-all opacity-60 -z-10 pulse' />
 
-            <div className="grid content-center text-center md:text-left p-5 h-fit w-full md:w-auto lg:mr-5 md:-mt-32">
+            <div className="grid content-center text-center md:text-left p-5 h-fit w-full md:w-auto lg:mr-5 md:-mt-28">
 
                 <div>
                     <p className={`${titleFont.className} text-xl lg:text-3xl mb-1 pl-0.5`}>
@@ -39,14 +39,14 @@ export const Hero = () => {
                     </h1>
                 </div>
 
-                <div className="pl-0.5 mt-7 text-xl lg:text-3xl antialiased">
+                <div className="pl-0.5 mt-5 text-xl lg:text-3xl antialiased">
                     <span ref={typedRef}>
                     </span>
                 </div>
 
             </div>
 
-            <div className='basis-1/4 md:basis-2/4 lg:basis-auto relative flex items-center px-14 md:px-0 -mt-44 md:-mt-32'>
+            <div className='basis-1/4 md:basis-2/4 lg:basis-auto relative flex items-center px-14 md:px-0 -mt-20 md:-mt-28'>
                 <Image
                     src='/profile-picture/profile-picture.png'
                     alt="hero-image-imdamiandev"
@@ -56,8 +56,8 @@ export const Hero = () => {
                 />
             </div>
 
-            <div className='absolute w-12 h-20 rounded-full border-3 border-secondary bottom-32 md:bottom-24 transition-all'>
-                <FaArrowDown size={25} className='text-secondary absolute bottom-3 left-[9px]'/>
+            <div className='absolute w-12 h-20 rounded-full border-3 border-secondary bottom-10 md:bottom-16 transition-all pulse'>
+                <FaArrowDown size={25} className='text-secondary absolute bottom-3 left-[9px]' />
             </div>
         </div>
     )

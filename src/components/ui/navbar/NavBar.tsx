@@ -13,7 +13,7 @@ export const NavBar = () => {
     const { navItems } = siteConfig;
 
     return (
-        <Navbar isBlurred={false} maxWidth="full" className="shadow" onMenuOpenChange={setIsMenuOpen}>
+        <Navbar isBlurred={false} maxWidth="full" className="absolute shadow" onMenuOpenChange={setIsMenuOpen}>
             <NavbarBrand>
                 <p className={`${titleFont.className} text-2xl font-bold`}>ImDamian<span className="text-secondary">Dev</span></p>
             </NavbarBrand>
