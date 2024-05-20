@@ -56,7 +56,7 @@ export const Hero = () => {
                 />
             </div>
 
-            <div className='absolute w-12 h-20 rounded-full border-3 border-secondary bottom-28'>
+            <div className='absolute w-12 h-20 rounded-full border-3 border-secondary bottom-32 md:bottom-24 transition-all'>
                 <FaArrowDown size={25} className='text-secondary absolute bottom-3 left-[9px]'/>
             </div>
         </div>
