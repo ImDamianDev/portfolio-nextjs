@@ -24,6 +24,11 @@ const config: Config = {
               foreground: "#FFFFFF",
               DEFAULT: "#1B688D",
             },
+            secondary: {
+              //... 50 to 900
+              foreground: "#FFFFFF",
+              DEFAULT: "#62B9B3",
+            },
             // ... rest of the colors
           },
         },
@@ -32,6 +37,11 @@ const config: Config = {
             background: "#1B688D", // or DEFAULT
             foreground: "#ECEDEE", // or 50 to 900 DEFAULT
             primary: {
+              //... 50 to 900
+              foreground: "#FFFFFF",
+              DEFAULT: "#F7F7F7",
+            },
+            secondary: {
               //... 50 to 900
               foreground: "#FFFFFF",
               DEFAULT: "#62B9B3",

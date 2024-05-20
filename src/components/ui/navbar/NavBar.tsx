@@ -15,26 +15,26 @@ export const NavBar = () => {
     return (
         <Navbar isBlurred={false} maxWidth="full" className="shadow-sm" onMenuOpenChange={setIsMenuOpen}>
             <NavbarBrand>
-                <p className={`${titleFont.className} text-2xl font-bold text-inherit`}>ImDamianDev</p>
+                <p className={`${titleFont.className} text-primary text-2xl font-bold text-inherit`}>ImDamian<span className="text-secondary">Dev</span></p>
             </NavbarBrand>
             <ThemeSwitch />
             <NavbarMenuToggle
                 aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                 className="sm:hidden"
             />
-            <NavbarContent className="hidden sm:flex gap-5 text-primary-500 font-semibold" justify="center">
+            <NavbarContent className="hidden sm:flex gap-5 text-primary font-semibold" justify="center">
                 <NavbarItem>
-                    <Link href="/about" className="text-xl hover:scale-110 transition-all">
+                    <Link href="/about" className="text-lg ml-3 hover:scale-110 transition-all">
                         About
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link href="/proyects" className="text-xl hover:scale-110 transition-all">
+                    <Link href="/proyects" className="text-lg ml-3 hover:scale-110 transition-all">
                         Proyects
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link href="/contact" className="text-xl hover:scale-110 transition-all">
+                    <Link href="/contact" className="text-lg ml-3 hover:scale-110 transition-all">
                         Contact
                     </Link>
                 </NavbarItem>
