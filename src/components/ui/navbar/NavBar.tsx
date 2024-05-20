@@ -15,7 +15,9 @@ export const NavBar = () => {
     return (
         <Navbar isBlurred={false} maxWidth="full" className="absolute shadow" onMenuOpenChange={setIsMenuOpen}>
             <NavbarBrand>
-                <p className={`${titleFont.className} text-2xl font-bold`}>ImDamian<span className="text-secondary">Dev</span></p>
+                <Link href="/">
+                    <p className={`${titleFont.className} text-2xl font-bold`}>ImDamian<span className="text-secondary">Dev</span></p>
+                </Link>
             </NavbarBrand>
             <ThemeSwitch />
             <NavbarMenuToggle
@@ -25,16 +27,19 @@ export const NavBar = () => {
             <NavbarContent className="hidden sm:flex gap-5" justify="center">
                 <NavbarItem>
                     <Link href="/about" className="text-lg ml-3 hover:scale-105 transition-all">
+                        <span className="text-secondary font-bold mr-1">_</ span>
                         About
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
                     <Link href="/proyects" className="text-lg ml-3 hover:scale-105 transition-all">
+                        <span className="text-secondary font-bold mr-1">_</ span>
                         Proyects
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
                     <Link href="/contact" className="text-lg ml-3 hover:scale-105 transition-all">
+                        <span className="text-secondary font-bold mr-1">_</ span>
                         Contact
                     </Link>
                 </NavbarItem>
