@@ -47,7 +47,7 @@ export const NavBar = () => {
                             href={item.href}
                             size="lg"
                         >
-                            <p className="text-2xl text-primary-500">
+                            <p className="text-2xl text-primary">
                                 {item.label}
                             </p>
                         </Link>
