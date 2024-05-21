@@ -1,31 +1,44 @@
 "use client"
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
+
+// Definir la estructura del estado del formulario para mayor claridad y seguridad en el manejo de datos
+interface FormData {
+    name: string;
+    email: string;
+    message: string;
+}
 
 export const ContactForm = () => {
-
-    const [formData, setFormData] = useState({
+    // Inicializar el estado del formulario con la estructura definida
+    const [formData, setFormData] = useState<FormData>({
         name: '',
         email: '',
         message: ''
     });
 
+    // Estado para manejar la carga mientras se envía el formulario
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
+    // Estado para manejar posibles errores durante el envío del formulario
+    const [error, setError] = useState<string | null>(null);
+    // Estado para manejar la confirmación de envío exitoso del formulario
     const [success, setSuccess] = useState(false);
 
-    function handleChange(event) {
+    // Función para manejar cambios en los campos del formulario
+    function handleChange(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
         const { name, value } = event.target;
+        // Actualizar el estado del formulario manteniendo los valores anteriores
         setFormData((prevFormData) => ({
             ...prevFormData,
             [name]: value
         }));
     }
 
-    async function handleSubmit(event) {
+    // Función para manejar el envío del formulario
+    async function handleSubmit(event: FormEvent) {
         event.preventDefault();
-        setLoading(true);
-        setError(null);
-        setSuccess(false);
+        setLoading(true); // Indicar que el envío está en proceso
+        setError(null); // Resetear posibles errores anteriores
+        setSuccess(false); // Resetear el estado de éxito
 
         try {
             const response = await fetch('/api/contact', {
@@ -33,21 +46,27 @@ export const ContactForm = () => {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(formData)
+                body: JSON.stringify(formData) // Enviar los datos del formulario
             });
 
             if (!response.ok) {
+                // Manejar respuestas que no sean exitosas
                 throw new Error(`response status: ${response.status}`);
             }
 
             const responseData = await response.json();
-            setSuccess(true);
+            setSuccess(true); // Indicar que el envío fue exitoso
             alert('Message successfully sent');
         } catch (err) {
-            setError(err.message);
+            // Verificar que el error es de tipo Error y actualizar el estado de error
+            if (err instanceof Error) {
+                setError(err.message);
+            } else {
+                setError('An unknown error occurred');
+            }
             alert("Error, please try resubmitting the form");
         } finally {
-            setLoading(false);
+            setLoading(false); // Indicar que el envío ha terminado
         }
     }
 
@@ -64,7 +83,7 @@ export const ContactForm = () => {
                     value={formData.name}
                     onChange={handleChange}
                     className="p-2 border-2 border-secondary bg-secondary bg-opacity-10 rounded-md mb-4"
-                    required
+                    required // Asegurar que el campo es obligatorio
                 />
 
                 <label htmlFor="form-email">Email</label>
@@ -77,7 +96,7 @@ export const ContactForm = () => {
                     value={formData.email}
                     onChange={handleChange}
                     className="p-2 border-2 border-secondary bg-secondary bg-opacity-10 rounded-md mb-4"
-                    required
+                    required // Asegurar que el campo es obligatorio
                 />
 
                 <label htmlFor="form-message">Message</label>
@@ -88,16 +107,16 @@ export const ContactForm = () => {
                     value={formData.message}
                     onChange={handleChange}
                     className="p-2 border-2 border-secondary bg-secondary bg-opacity-10 rounded-md mb-4"
-                    required
+                    required // Asegurar que el campo es obligatorio
                 />
             </div>
 
             <button className="flex mx-auto rounded-xl border-2 border-secondary py-2 px-7" type="submit" disabled={loading}>
-                {loading ? 'Sending...' : 'Send'}
+                {loading ? 'Sending...' : 'Send'} {/* Mostrar estado de carga */}
             </button>
-            
-            {error && <p className="text-red-500 mt-4">Error: {error}</p>}
-            {success && <p className="text-green-500 mt-4">Message successfully sent!</p>}
+
+            {error && <p className="text-red-500 mt-4">Error: {error}</p>} {/* Mostrar mensaje de error si existe */}
+            {success && <p className="text-green-500 mt-4">Message successfully sent!</p>} {/* Mostrar mensaje de éxito si el envío fue exitoso */}
         </form>
     );
 }
