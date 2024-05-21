@@ -3,7 +3,7 @@ import { IoMdMail } from "react-icons/io";
 
 export const Footer = () => {
     return (
-        <footer className="py-12 text-center text-sm font-light border-2 border-t-secondary">
+        <footer className="py-12 text-center text-sm font-light border-t-2 border-t-secondary">
             <div className="flex flex-row justify-center mb-3 gap-3">
                 <a href="https://github.com/ImDamianDev/" className="hover:scale-105"><FaGithub size="2em" /></a>
                 <a href="https://www.linkedin.com/in/imdamian-dev/" className="hover:scale-105"><FaLinkedin size="2em" /></a>
