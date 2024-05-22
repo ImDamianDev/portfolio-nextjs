@@ -5,6 +5,7 @@ import { titleFont } from "@/config/fonts";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "../theme-switch/ThemeSwitch";
+import { FramerMagnetic } from "../framer-magnetic/FramerMagnetic";
 
 export const NavBar = () => {
 
@@ -15,9 +16,11 @@ export const NavBar = () => {
     return (
         <Navbar isBlurred={false} maxWidth="full" className="absolute shadow" onMenuOpenChange={setIsMenuOpen}>
             <NavbarBrand>
-                <Link href="/">
-                    <p className={`${titleFont.className} text-2xl font-bold`}>ImDamian<span className="text-secondary">Dev</span></p>
-                </Link>
+                <FramerMagnetic>
+                    <Link href="/">
+                        <p className={`${titleFont.className} text-xl font-bold`}>ImDamian<span className="text-secondary">Dev</span></p>
+                    </Link>
+                </FramerMagnetic>
             </NavbarBrand>
             <ThemeSwitch />
             <NavbarMenuToggle
