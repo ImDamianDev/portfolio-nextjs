@@ -56,7 +56,7 @@ export const ContactForm = () => {
 
             const responseData = await response.json();
             setSuccess(true); // Indicar que el envío fue exitoso
-            alert('Message successfully sent');
+            alert('¡Mensaje enviado con exito!');
         } catch (err) {
             // Verificar que el error es de tipo Error y actualizar el estado de error
             if (err instanceof Error) {
@@ -73,7 +73,7 @@ export const ContactForm = () => {
     return (
         <form onSubmit={handleSubmit} className="w-full max-w-[550px]">
             <div className="mb-4 flex flex-col w-full">
-                <label htmlFor="form-name">Name</label>
+                <label htmlFor="form-name">Nombre</label>
                 <input
                     id="form-name"
                     name="name"
@@ -86,7 +86,7 @@ export const ContactForm = () => {
                     required // Asegurar que el campo es obligatorio
                 />
 
-                <label htmlFor="form-email">Email</label>
+                <label htmlFor="form-email">Correo</label>
                 <input
                     id="form-email"
                     name="email"
@@ -99,7 +99,7 @@ export const ContactForm = () => {
                     required // Asegurar que el campo es obligatorio
                 />
 
-                <label htmlFor="form-message">Message</label>
+                <label htmlFor="form-message">Mensaje</label>
                 <textarea
                     id="form-message"
                     name="message"
@@ -112,11 +112,11 @@ export const ContactForm = () => {
             </div>
 
             <button className="flex mx-auto rounded-xl border-2 border-secondary py-2 px-7" type="submit" disabled={loading}>
-                {loading ? 'Sending...' : 'Send'} {/* Mostrar estado de carga */}
+                {loading ? 'Enviando...' : 'Enviar'} {/* Mostrar estado de carga */}
             </button>
 
             {error && <p className="text-red-500 mt-4">Error: {error}</p>} {/* Mostrar mensaje de error si existe */}
-            {success && <p className="text-green-500 mt-4">Message successfully sent!</p>} {/* Mostrar mensaje de éxito si el envío fue exitoso */}
+            {success && <p className="text-green-500 mt-4">¡Mensaje enviado con exito!</p>} {/* Mostrar mensaje de éxito si el envío fue exitoso */}
         </form>
     );
 }

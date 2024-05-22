@@ -14,7 +14,7 @@ export const NavBar = () => {
     const { navItems } = siteConfig;
 
     return (
-        <Navbar isBlurred={false} maxWidth="full" className="absolute shadow" onMenuOpenChange={setIsMenuOpen}>
+        <Navbar isBlurred={false} maxWidth="full" className="absolute shadow-none md:shadow" onMenuOpenChange={setIsMenuOpen}>
             <NavbarBrand>
                 <FramerMagnetic>
                     <Link href="/">
