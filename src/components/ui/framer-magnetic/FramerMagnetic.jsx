@@ -29,7 +29,6 @@ export const FramerMagnetic = ({ children }) => {
             ref={ref}
             animate={{ x, y }}
             transition={{ type: 'spring' }}
-            className='p-2'
         >
             {children}
         </motion.div>

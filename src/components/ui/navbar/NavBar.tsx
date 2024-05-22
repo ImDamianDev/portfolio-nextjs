@@ -16,11 +16,13 @@ export const NavBar = () => {
     return (
         <Navbar isBlurred={false} maxWidth="full" className="absolute shadow-none md:shadow" onMenuOpenChange={setIsMenuOpen}>
             <NavbarBrand>
-                <FramerMagnetic>
-                    <Link href="/">
-                        <p className={`${titleFont.className} text-xl font-bold`}>ImDamian<span className="text-secondary">Dev</span></p>
-                    </Link>
-                </FramerMagnetic>
+                <Link href="/">
+                    <p className={`${titleFont.className} flex items-center text-xl font-bold`}>ImDamian
+                        <FramerMagnetic>
+                            <span className="text-secondary">Dev</span>
+                        </FramerMagnetic>
+                    </p>
+                </Link>
             </NavbarBrand>
             <ThemeSwitch />
             <NavbarMenuToggle
