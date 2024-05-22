@@ -18,10 +18,10 @@ export const NavBar = () => {
             <NavbarBrand>
                 <Link href="/">
                     <p className={`${titleFont.className} flex items-center text-xl font-bold`}>ImDamian
-                        <FramerMagnetic>
-                            <span className="text-secondary">Dev</span>
-                        </FramerMagnetic>
                     </p>
+                    <FramerMagnetic>
+                        <span className="text-xl text-secondary font-semibold">Dev</span>
+                    </FramerMagnetic>
                 </Link>
             </NavbarBrand>
             <ThemeSwitch />

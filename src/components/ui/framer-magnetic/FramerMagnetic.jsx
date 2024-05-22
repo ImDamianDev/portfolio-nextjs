@@ -28,7 +28,7 @@ export const FramerMagnetic = ({ children }) => {
             onMouseLeave={mouseLeave}
             ref={ref}
             animate={{ x, y }}
-            transition={{ type: 'spring' }}
+            transition={{ type: 'spring', bounce: 0.6}}
         >
             {children}
         </motion.div>
