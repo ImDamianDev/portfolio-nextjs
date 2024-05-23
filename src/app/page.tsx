@@ -1,5 +1,5 @@
 'use client'
-import { About, ContactForm, Hero } from "@/components";
+import { About, ContactForm, Hero, Works, SectionTitle } from "@/components";
 import { FramerMagnetic } from "@/components/ui/framer-magnetic/FramerMagnetic";
 import { motion, Variants } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -29,12 +29,13 @@ export default function HomePage() {
     <div className="min-h-screen m-0 p-0">
 
       <Hero />
+      <Works />
       <About />
 
       <div className="p-7">
         <div className=" max-w-[850px] mx-auto flex flex-col md:flex-row content-center p-7 gap-7">
           <div className="mb-0 md:mb-7 flex flex-col">
-            <h1 className="text-center md:text-left font-bold text-5xl text-secondary mb-16">Contacto</h1>
+            <SectionTitle text="Contacto" />
             <p className="text-md font-light">¿Tienes una pregunta, propuesta, proyecto o quieres trabajar juntos en algo?<br />No dudes en comunicarte.</p>
             <div className="w-[150px] h-1 bg-secondary rounded my-5" />
             <div className="flex flex-row justify-left gap-8">

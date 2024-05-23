@@ -48,7 +48,7 @@ export const Hero = () => {
 
             <div className='basis-1/4 md:basis-2/4 lg:basis-auto relative flex items-center px-14 md:px-0 -mt-20 md:-mt-28'>
                 <Image
-                    src='/profile-picture/profile-picture.png'
+                    src='/img/profile/imdamian.png'
                     alt="hero-image-imdamiandev"
                     width={500}
                     height={500}
