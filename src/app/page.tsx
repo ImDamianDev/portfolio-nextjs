@@ -1,11 +1,33 @@
+'use client'
 import { About, ContactForm, Hero } from "@/components";
 import { FramerMagnetic } from "@/components/ui/framer-magnetic/FramerMagnetic";
+import { motion, Variants } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+
+
+const cardVariants: Variants = {
+  offscreen: {
+    y: 150,
+    rotate: -10,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    rotate: 0,
+    opacity: 100,
+    transition: {
+      type: "spring",
+      bounce: 0.5,
+      duration: 0.8
+    }
+  },
+};
 
 export default function HomePage() {
   return (
     <div className="min-h-screen m-0 p-0">
+
       <Hero />
       <About />
 
@@ -27,11 +49,25 @@ export default function HomePage() {
               </FramerMagnetic>
             </div>
           </div>
-          <div className="w-full py-7 md:p-7 border-0 md:border-2 border-secondary rounded-lg md:shadow-lg shadow-secondary">
-            <ContactForm />
-          </div>
+
+
+          <motion.div
+            className="w-full"
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.8 }}
+          >
+            <motion.div
+              variants={cardVariants}
+              className="w-full py-7 md:p-7 border-0 md:border-2 border-secondary rounded-lg md:shadow-lg shadow-secondary">
+
+              <ContactForm />
+            </motion.div>
+
+          </motion.div>
         </div>
       </div>
+
 
     </div>
   );
