@@ -27,10 +27,9 @@ const cardVariants: Variants = {
 export default function HomePage() {
   return (
     <div className="min-h-screen m-0 p-0">
-
+      
       <Hero />
       <Works />
-      <About />
 
       <div className="p-7">
         <div className=" max-w-[850px] mx-auto flex flex-col md:flex-row content-center p-7 gap-7">

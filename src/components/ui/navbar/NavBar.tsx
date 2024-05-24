@@ -14,13 +14,12 @@ export const NavBar = () => {
     const { navItems } = siteConfig;
 
     return (
-        <Navbar isBlurred={false} maxWidth="full" className="absolute shadow-none md:shadow" onMenuOpenChange={setIsMenuOpen}>
+        <Navbar isBlurred={false} maxWidth="full" className=" shadow-none md:shadow" onMenuOpenChange={setIsMenuOpen}>
             <NavbarBrand>
-                <Link href="/">
-                    <p className={`${titleFont.className} flex items-center text-xl font-bold`}>ImDamian
-                    </p>
+                <Link href="/" className="flex flex-row items-baseline">
+                    <p className={`${titleFont.className} text-xl font-bold`}>ImDamian</p>
                     <FramerMagnetic>
-                        <span className="text-xl text-secondary font-semibold">Dev</span>
+                        <p className="text-xl font-semibold text-secondary">Dev</p>
                     </FramerMagnetic>
                 </Link>
             </NavbarBrand>
