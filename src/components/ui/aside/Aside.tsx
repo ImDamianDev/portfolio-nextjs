@@ -1,15 +1,14 @@
 'use client'
 import { SocialLink } from '@/components';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
 import { FaCopy } from 'react-icons/fa';
 
 export const Aside = () => {
 
-    const [copiedText, setCopiedText] = useState('')
+    const [copiedText, setCopiedText] = useState<string>('')
 
-    const handleCopy = (text) => {
+    const handleCopy = (text: string) => {
         navigator.clipboard.writeText(text)
             .then(() => {
                 setCopiedText(text);
