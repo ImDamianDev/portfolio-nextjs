@@ -10,3 +10,5 @@ export * from './home/works/Works'
 export * from './ui/footer/Footer';
 export * from './ui/navbar/NavBar';
 export * from './ui/section-title/SectionTitle';
+export * from './ui/aside/Aside'
+export * from './ui/social-link/SocialLink'

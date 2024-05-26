@@ -1,10 +1,6 @@
 'use client'
-import { About, ContactForm, Hero, Works, SectionTitle } from "@/components";
-import { FramerMagnetic } from "@/components/ui/framer-magnetic/FramerMagnetic";
+import { ContactForm, Hero, Works, SectionTitle, SocialLink, } from "@/components";
 import { motion, Variants } from "framer-motion";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { IoMdMail } from "react-icons/io";
-
 
 const cardVariants: Variants = {
   offscreen: {
@@ -27,26 +23,21 @@ const cardVariants: Variants = {
 export default function HomePage() {
   return (
     <div className="min-h-screen m-0 p-0">
-      
+
       <Hero />
+
       <Works />
 
-      <div className="p-7">
+      <div id="contact" className="p-7">
         <div className=" max-w-[850px] mx-auto flex flex-col md:flex-row content-center p-7 gap-7">
           <div className="mb-0 md:mb-7 flex flex-col">
             <SectionTitle text="Contacto" />
             <p className="text-md font-light">¿Tienes una pregunta, propuesta, proyecto o quieres trabajar juntos en algo?<br />No dudes en comunicarte.</p>
             <div className="w-[150px] h-1 bg-secondary rounded my-5" />
             <div className="flex flex-row justify-left gap-8">
-              <FramerMagnetic>
-                <a href="https://github.com/ImDamianDev/"><FaGithub size="2em" /></a>
-              </FramerMagnetic>
-              <FramerMagnetic>
-                <a href="https://www.linkedin.com/in/imdamian-dev/"><FaLinkedin size="2em" /></a>
-              </FramerMagnetic>
-              <FramerMagnetic>
-                <a href="mailto:imdamian.dev@gmail.com"><IoMdMail size="2em" /></a>
-              </FramerMagnetic>
+              <SocialLink type="github" href="https://github.com/ImDamianDev/" />
+              <SocialLink type="linkedin" href="https://www.linkedin.com/in/imdamian-dev/" />
+              <SocialLink type="mail" href="mailto:imdamian.dev@gmail.com" />
             </div>
           </div>
 
