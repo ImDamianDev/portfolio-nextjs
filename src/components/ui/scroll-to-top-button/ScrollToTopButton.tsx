@@ -15,7 +15,7 @@ export const ScrollToTopButton = () => {
      * El botón es visible si la posición de desplazamiento es mayor a 300 píxeles.
      */
     const toggleVisibility = () => {
-        if (window.pageYOffset > 300) {
+        if (window.scrollY > 300) {
             setIsVisible(true);
         } else {
             setIsVisible(false);

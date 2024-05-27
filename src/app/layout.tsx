@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" suppressHydrationWarning>
+    <html lang="es" className="!scroll-smooth" suppressHydrationWarning>
       <body className={inter.className}>
         <Providers>
           <NavBar />
@@ -30,7 +30,7 @@ export default function RootLayout({
             </div>
 
             <div className="lg:col-span-9 lg:pt-4 lg:px-6">
-              <main className="rounded-xl">
+              <main className="relative rounded-xl snap-y transition-all">
                 {children}
                 <Footer />
               </main>

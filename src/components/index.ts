@@ -14,3 +14,4 @@ export * from './ui/section-title/SectionTitle';
 export * from './ui/aside/Aside'
 export * from './ui/social-link/SocialLink'
 export * from './ui/scroll-to-top-button/ScrollToTopButton'
+export * from './ui/scroll-to-section-button/ScrollToSectionButton'

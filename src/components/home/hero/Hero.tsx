@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React, { useRef, useEffect } from 'react';
 import Typed from 'typed.js';
 import { titleFont } from '@/config/fonts';
-import { SectionTitle } from '@/components';
+import { ScrollToSectionButton, SectionTitle } from '@/components';
 import Link from 'next/link';
 import { Button } from '@nextui-org/react';
 
@@ -61,10 +61,11 @@ export const Hero = () => {
                         >
                             Sobre mi
                         </Link>
-                        <Link href="#study-cases" className='text-center py-3 px-8 border border-secondary rounded-md text-secondary hover:bg-secondary hover:text-foreground hover:scale-105 hover:font-bold transition-all'
-                        >
-                            Portafolio
-                        </Link>
+
+                        <ScrollToSectionButton targetId="study-cases" className="text-center py-3 px-8 border border-secondary rounded-md text-secondary hover:bg-secondary hover:text-foreground hover:scale-105 hover:font-bold transition-all">
+                            <span>Portafolio</span>
+                        </ScrollToSectionButton>
+
                     </div>
 
                 </div>
