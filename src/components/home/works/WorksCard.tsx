@@ -14,13 +14,13 @@ interface WorksCardProps {
 const WorksCard: React.FC<WorksCardProps> = ({ data }) => {
   return (
     <>
-      <Card isFooterBlurred className="w-full h-[300px] hover:">
+      <Card isFooterBlurred className="w-full h-[300px]">
         <Image
           alt="Relaxing app background"
           className="z-0 w-full h-full object-cover"
           src={data.imgUrl}
-          width={500}
-          height={500}
+          width={300}
+          height={300}
         />
         <CardFooter className="absolute bg-secondary/90 bottom-0 z-10 border-t-1 border-secondary">
           <div className="flex flex-grow gap-2 items-center">

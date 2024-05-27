@@ -82,7 +82,7 @@ export const ContactForm = () => {
                     autoComplete="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="p-2 border-2 border-secondary bg-secondary bg-opacity-10 rounded-md mb-4"
+                    className="p-1 border-b-1 border-secondary bg-secondary bg-opacity-10 mt-1 mb-4"
                     required // Asegurar que el campo es obligatorio
                 />
 
@@ -95,7 +95,7 @@ export const ContactForm = () => {
                     autoComplete="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="p-2 border-2 border-secondary bg-secondary bg-opacity-10 rounded-md mb-4"
+                    className="p-1 border-b-1 border-secondary bg-secondary bg-opacity-10 mt-1 mb-4"
                     required // Asegurar que el campo es obligatorio
                 />
 
@@ -106,12 +106,12 @@ export const ContactForm = () => {
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
-                    className="p-2 border-2 border-secondary bg-secondary bg-opacity-10 rounded-md mb-4"
+                    className="p-1 border-b-1 border-secondary bg-secondary bg-opacity-10 mt-1 mb-4"
                     required // Asegurar que el campo es obligatorio
                 />
             </div>
 
-            <button className="flex mx-auto rounded-xl border-2 border-secondary py-2 px-7" type="submit" disabled={loading}>
+            <button className="flex mx-auto rounded-xl border-1 border-secondary py-2 px-7 hover:bg-secondary hover:font-bold hover:scale-105 transition-all" type="submit" disabled={loading}>
                 {loading ? 'Enviando...' : 'Enviar'} {/* Mostrar estado de carga */}
             </button>
 

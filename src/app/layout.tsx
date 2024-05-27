@@ -4,7 +4,7 @@ import "./globals.css";
 import { inter } from "@/config/fonts";
 
 import { Providers } from "./providers";
-import { Aside, Footer, NavBar } from "@/components";
+import { Aside, Footer, NavBar, ScrollToTopButton } from "@/components";
 
 export const metadata: Metadata = {
   title: "ImDamianDev",
@@ -21,9 +21,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <NavBar />
-          <div className="grid grid-cols-1 lg:grid-cols-12 max-w-1200px mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 max-w-[1600px] mx-auto">
 
-            <div className="lg:col-span-3 lg:flex sticky lg:py-4 lg:px-6 min-h-[92vh] md:min-h-fit lg:h-[92vh] lg:top-16 min-w-[18.5rem]">
+            <div className="lg:col-span-3 lg:flex sticky lg:py-4 lg:px-6 md:min-h-fit lg:h-[92vh] lg:top-16 min-w-[18.5rem]">
 
               <Aside />
 
@@ -39,6 +39,7 @@ export default function RootLayout({
 
           </div>
         </Providers>
+        <ScrollToTopButton />
       </body>
     </html>
   );

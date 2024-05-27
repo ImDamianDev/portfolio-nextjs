@@ -3,7 +3,9 @@ import Image from 'next/image';
 import React, { useRef, useEffect } from 'react';
 import Typed from 'typed.js';
 import { titleFont } from '@/config/fonts';
-import { FaArrowDown } from 'react-icons/fa';
+import { SectionTitle } from '@/components';
+import Link from 'next/link';
+import { Button } from '@nextui-org/react';
 
 export const Hero = () => {
 
@@ -12,7 +14,7 @@ export const Hero = () => {
     useEffect(() => {
         const typed = new Typed(typedRef.current, {
             strings: ['Desarrollador web.',],
-            typeSpeed: 110,
+            typeSpeed: 100,
             backSpeed: 110,
             loop: true
         });
@@ -24,41 +26,61 @@ export const Hero = () => {
 
 
     return (
-        <div id="hero" className='relative min-h-screen flex flex-col-reverse md:flex-row justify-center items-center'>
+        <div id="hero" className='lg:min-h-[90vh]'>
 
-            <div className='absolute w-20 h-20 rounded-full bg-secondary top-28 left-10 md:w-28 md:h-28 md:top-32 lg:left-20 lg:top-32 xl:left-40 xl:top-40 2xl:w-48 2xl:h-48 transition-all opacity-60 -z-10 pulse' />
+            <div className='border-b-2 border-secondary w-fit ml-6 lg:ml-0 sticky top-17 mt-6'>
+                <SectionTitle text="Presentacion" />
+            </div>
 
-            <div className="grid content-center text-center md:text-left p-5 h-fit w-full md:w-auto lg:mr-5 md:-mt-28">
+            <div id="hero-body" className='grid md:grid-cols-2 lg:min-h-[80vh]'>
 
-                <div>
-                    <p className={`${titleFont.className} text-xl lg:text-3xl mb-1 pl-0.5`}>
-                        Hola, mi nombre es
+                <div id="hero-description" className='grid content-center pt-8 px-6 md:py-6 lg:p-0'>
+
+                    <p className='text-lg'>
+                        ¡Hola! Soy
                     </p>
-                    <h1 className={`${titleFont.className} text-secondary text-5xl lg:text-7xl font-bold antialiased`}>
-                        Damian Cortés
+                    <h1 className={`${titleFont.className} text-secondary text-5xl lg:text-7xl font-bold antialiased -my-1`}>
+                        Damian
                     </h1>
+
+                    <div className='text-lg h-6 text-secondary/50 mb-6'>
+                        <span ref={typedRef} className='w-fit'>
+                        </span>
+                    </div>
+
+                    <p className='mb-2'>
+                        En 2022, mi curiosidad me llevó a inscribirme en un bootcamp intensivo de JavaScript, una experiencia que transformó mi perspectiva.
+                    </p>
+
+                    <p className='mb-12'>
+                        Aunque no siempre con la constancia que desearía, desde entonces no he dejado de aprender cosas nuevas.
+                    </p>
+
+                    <div id="hero-links" className='flex flex-col md:flex-row gap-5'>
+                        <Link href="/about" className='text-center py-3 px-8 border border-secondary rounded-md text-secondary hover:bg-secondary hover:text-foreground hover:scale-105 hover:font-bold transition-all'
+                        >
+                            Sobre mi
+                        </Link>
+                        <Link href="#study-cases" className='text-center py-3 px-8 border border-secondary rounded-md text-secondary hover:bg-secondary hover:text-foreground hover:scale-105 hover:font-bold transition-all'
+                        >
+                            Portafolio
+                        </Link>
+                    </div>
+
                 </div>
 
-                <div className="pl-0.5 mt-5 text-xl lg:text-3xl antialiased">
-                    <span ref={typedRef}>
-                    </span>
+                <div id="hero-image" className='p-10 grid'>
+                    <Image
+                        src='/img/hero_ilustration.svg'
+                        alt="hero-ilustration"
+                        width={500}
+                        height={500}
+                        className='my-auto scale-110 -z-10'
+                    />
                 </div>
 
             </div>
 
-            <div className='basis-1/4 md:basis-2/4 lg:basis-auto relative flex items-center px-14 md:px-0 -mt-20 md:-mt-28'>
-                <Image
-                    src='/img/profile/imdamian.png'
-                    alt="hero-image-imdamiandev"
-                    width={500}
-                    height={500}
-                    className='rounded-full'
-                />
-            </div>
-
-            <div className='absolute w-12 h-20 rounded-full border-3 border-secondary bottom-16 transition-all pulse'>
-                <FaArrowDown size={25} className='text-secondary absolute bottom-3 left-[9px]' />
-            </div>
         </div>
     )
 }

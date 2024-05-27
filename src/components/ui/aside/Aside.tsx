@@ -18,7 +18,7 @@ export const Aside = () => {
     };
 
     return (
-        <div className="flex flex-col sm:flex-row lg:flex-col min-w-full min-h-full p-4 lg:border-r border-secondary/50">
+        <div className="flex flex-col sm:flex-row lg:flex-col min-w-full md:min-h-full p-4 lg:border-r border-secondary/50">
 
             <div className='flex items-start justify-center px-8'>
                 <Image
@@ -30,7 +30,7 @@ export const Aside = () => {
                 />
             </div>
 
-            <div className='sm:basis-3/4 md:ml-6 lg:ml-0 text-center md:text-left'>
+            <div className='hidden md:block sm:basis-3/4 md:ml-6 lg:ml-0 text-center md:text-left'>
 
                 <div className='py-3'>
 

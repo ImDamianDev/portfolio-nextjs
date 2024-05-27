@@ -1,4 +1,4 @@
-import React from 'react';
+import { titleFont } from '@/config/fonts';
 
 interface SectionTitleProps {
     text: string;
@@ -7,7 +7,7 @@ interface SectionTitleProps {
 
 export const SectionTitle: React.FC<SectionTitleProps> = ({ text, additionalClasses = '' }) => {
     return (
-        <h1 className={`text-center md:text-left font-bold text-5xl text-secondary mb-16 ${additionalClasses}`}>
+        <h1 className={`text-xl font-semibold py-2 text-secondary ${titleFont.className} ${additionalClasses}`}>
             {text}
         </h1>
     );

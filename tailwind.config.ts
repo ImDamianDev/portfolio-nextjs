@@ -31,6 +31,7 @@ const config: Config = {
             },
             // ... rest of the colors
           },
+          
         },
         dark: {
           colors: {
