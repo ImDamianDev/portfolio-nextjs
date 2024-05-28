@@ -5,7 +5,7 @@ import { Variants, motion } from 'framer-motion';
 const cardVariants: Variants = {
     offscreen: {
       y: 150,
-      rotate: -10,
+      rotate: 0,
       opacity: 0,
     },
     onscreen: {

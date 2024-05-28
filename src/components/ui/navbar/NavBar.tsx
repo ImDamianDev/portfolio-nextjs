@@ -14,7 +14,7 @@ export const NavBar = () => {
     const { navItems } = siteConfig;
 
     return (
-        <Navbar isBlurred={false} maxWidth="full" className="shadow-xl shadow-background" onMenuOpenChange={setIsMenuOpen}>
+        <Navbar isBlurred={false} maxWidth="full" className=" bg-violet-400" onMenuOpenChange={setIsMenuOpen}>
             <NavbarBrand>
                 <Link href="/" className="flex flex-row items-baseline">
                     <p className={`${titleFont.className} text-xl font-bold`}>ImDamian</p>
@@ -53,7 +53,7 @@ export const NavBar = () => {
                         <Link
                             href={item.href}
                             size="lg"
-                            className="hover:pr-6 w-full py-2 justify-end transition-all"
+                            className="w-full py-2 justify-end transition-all"
                         >
                             <span className="text-secondary font-bold mr-1">_</ span>
                             <p className="text-2xl">

@@ -17,20 +17,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="!scroll-smooth" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning>
       <body className={inter.className}>
         <Providers>
           <NavBar />
-          <div className="grid grid-cols-1 lg:grid-cols-12 max-w-[1600px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 max-w-[1600px] mx-auto bg-lime-200">
 
-            <div className="lg:col-span-3 lg:flex sticky lg:py-4 lg:px-6 md:min-h-fit lg:h-[92vh] lg:top-16 min-w-[18.5rem]">
+            <div className="lg:col-span-3 lg:flex sticky lg:py-4 lg:px-6 md:min-h-fit lg:h-[92vh] lg:top-16 min-w-[18.5rem] bg-red-300">
 
-              <Aside />
+              <Aside/>
 
             </div>
 
             <div className="lg:col-span-9 lg:pt-4 lg:px-6">
-              <main className="relative rounded-xl snap-y transition-all">
+              <main className="relative rounded-xl snap-y transition-all bg-danger-200 ">
                 {children}
                 <Footer />
               </main>
