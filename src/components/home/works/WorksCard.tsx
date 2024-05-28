@@ -17,7 +17,7 @@ const WorksCard: React.FC<WorksCardProps> = ({ data }) => {
 
       <div className="flex flex-col justify-around mb-3 p-4">
 
-        <h3 className="mb-3">
+        <h3 className="mb-3 text-lg font-semibold">
           Titulo
         </h3>
 

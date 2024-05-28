@@ -28,7 +28,7 @@ export const NavBar = () => {
 
             <div
                 id="scroll-to-top-button"
-                className='sm:hidden fixed bottom-5 right-5 z-30 h-12 w-12 rounded-full border-2 bg-secondary/90 transition-all shadow-lg'
+                className='sm:hidden fixed bottom-8 right-5 h-12 w-12 z-50 rounded-full bg-secondary/90'
             >
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}

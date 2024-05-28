@@ -5,7 +5,6 @@ import Typed from 'typed.js';
 import { titleFont } from '@/config/fonts';
 import { ScrollToSectionButton, SectionTitle } from '@/components';
 import Link from 'next/link';
-import { Button } from '@nextui-org/react';
 
 export const Hero = () => {
 
