@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@media only screen and (min-width: 768px) {
+    .clip-diagonal {
+        clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+        z-index: 1;
+    }
+}
+
 .pulse {
     animation-name: pulse;
     animation-duration: 5s;

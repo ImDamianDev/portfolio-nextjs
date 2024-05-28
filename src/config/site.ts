@@ -5,16 +5,12 @@ export const siteConfig = {
     description: "A portfolio website for Damian Dev",
     navItems: [
         {
-            label: "Home",
+            label: "Inicio",
             href: "/",
         },
         {
-            label: "About",
+            label: "Sobre mí",
             href: "/about",
-        },
-        {
-            label: "Contact",
-            href: "/contact",
         },
     ],
     socialMedia: [
