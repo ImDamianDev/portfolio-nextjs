@@ -23,48 +23,53 @@ export const NavBar = () => {
                     </FramerMagnetic>
                 </Link>
             </NavbarBrand>
+
             <ThemeSwitch />
-            <NavbarMenuToggle
-                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                className="sm:hidden"
-            />
+
+            <div
+                id="scroll-to-top-button"
+                className='sm:hidden fixed bottom-5 right-5 z-30 h-12 w-12 rounded-full border-2 bg-secondary/90 transition-all shadow-lg'
+            >
+                <NavbarMenuToggle
+                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                    className="sm:hidden mx-auto"
+                />
+            </div>
+
             <NavbarContent className="hidden sm:flex gap-5" justify="center">
+                <NavbarItem>
+                    <Link href="/" className="text-lg ml-3 hover:scale-105 transition-all">
+                        <span className="text-secondary font-bold mr-1">_</ span>
+                        Inicio
+                    </Link>
+                </NavbarItem>
                 <NavbarItem>
                     <Link href="/about" className="text-lg ml-3 hover:scale-105 transition-all">
                         <span className="text-secondary font-bold mr-1">_</ span>
-                        About
+                        Sobre mí
                     </Link>
                 </NavbarItem>
-                <NavbarItem>
-                    <Link href="/proyects" className="text-lg ml-3 hover:scale-105 transition-all">
-                        <span className="text-secondary font-bold mr-1">_</ span>
-                        Proyects
-                    </Link>
-                </NavbarItem>
-                <NavbarItem>
-                    <Link href="/contact" className="text-lg ml-3 hover:scale-105 transition-all">
-                        <span className="text-secondary font-bold mr-1">_</ span>
-                        Contact
-                    </Link>
-                </NavbarItem>
-
             </NavbarContent>
-            <NavbarMenu className="max-h-56 max-w-50 justify-center gap-y-5 pt-0 shadow-lg">
+
+
+            <NavbarMenu className="sm:hidden flex flex-col justify-end pb-28 gap-y-5 shadow-lg">
                 {navItems.map((item) => (
-                    <NavbarMenuItem key={`${item}`} className="flex justify-end">
+                    <NavbarMenuItem key={`${item}`} className="flex">
                         <Link
                             href={item.href}
                             size="lg"
-                            className="hover:scale-105 transition-all"
+                            className="hover:pr-6 w-full py-2 justify-end transition-all"
                         >
                             <span className="text-secondary font-bold mr-1">_</ span>
-                            <p className="text-xl">
+                            <p className="text-2xl">
                                 {item.label}
                             </p>
                         </Link>
                     </NavbarMenuItem>
                 ))}
             </NavbarMenu>
+
+
         </Navbar>
     );
 }

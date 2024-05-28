@@ -47,9 +47,9 @@ export const ScrollToTopButton = () => {
             id="scroll-to-top-button"
             role="button"
             onClick={scrollToTop}
-            className={isVisible ? 'opacity-100 fixed bottom-5 right-5 z-20 p-4 rounded-full border-2 bg-secondary/90 transition-all shadow-lg' : 'opacity-0'}
+            className={isVisible ? 'flex opacity-80 fixed bottom-[80px] sm:bottom-5 right-5 z-20 h-12 w-12 rounded-full border-2 bg-secondary/90 transition-all shadow-lg' : 'opacity-0'}
         >
-            <FaArrowUp />
+            <FaArrowUp className='mx-auto my-auto'/>
         </div>
     );
 }
