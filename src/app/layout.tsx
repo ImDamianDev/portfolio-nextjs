@@ -21,16 +21,16 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <NavBar />
-          <div className="grid grid-cols-1 lg:grid-cols-12 max-w-[1600px] mx-auto bg-lime-200">
+          <div className="grid grid-cols-1 lg:grid-cols-12 max-w-[1600px] mx-auto">
 
-            <div className="lg:col-span-3 lg:flex sticky lg:py-4 lg:px-6 md:min-h-fit lg:h-[92vh] lg:top-16 min-w-[18.5rem] bg-red-300">
+            <div className="lg:col-span-3 lg:flex sticky lg:py-4 lg:px-6 md:min-h-fit lg:h-[92vh] lg:top-16 min-w-[18.5rem]">
 
               <Aside/>
 
             </div>
 
             <div className="lg:col-span-9 lg:pt-4 lg:px-6">
-              <main className="relative rounded-xl snap-y transition-all bg-danger-200 ">
+              <main className="relative rounded-xl transition-all">
                 {children}
                 <Footer />
               </main>

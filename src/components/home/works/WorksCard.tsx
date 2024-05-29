@@ -4,7 +4,8 @@ import Link from "next/link";
 
 interface WorksCardProps {
   data: {
-    nombreProyecto: string;
+    nameProject: string;
+    description: string;
     repoUrl: string;
     webUrl: string;
     imgUrl: string;
@@ -18,10 +19,10 @@ const WorksCard: React.FC<WorksCardProps> = ({ data }) => {
       <div className="flex flex-col justify-around mb-3 p-4">
 
         <h3 className="mb-3 text-lg font-semibold">
-          Titulo
+          {data.nameProject}
         </h3>
 
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe ullam aliquid tenetur tempora corrupti a reprehenderit voluptates? Maxime placeat sunt vero voluptate iusto nesciunt? Quod esse exercitationem ullam architecto aperiam.</p>
+        <p>{data.description}</p>
 
 
         <div className="flex gap-6 my-6 md:mb-0 md:w-80">

@@ -5,7 +5,8 @@ import projects from '@/data/projectsData';
 
 // Definir la interfaz Project (asumida basada en tu estructura previa)
 interface Project {
-  nombreProyecto: string;
+  nameProject: string;
+  description: string;
   repoUrl: string;
   webUrl: string;
   imgUrl: string;
@@ -20,7 +21,7 @@ export const Works: React.FC = () => {
         <SectionTitle text="Casos de estudio" />
       </div>
 
-      <div id="hero-body" className='grid gap-16'>
+      <div id="hero-body" className='grid gap-12'>
 
         {projects.map((project: Project) => (
           <WorksCard key={project.repoUrl} data={project} />

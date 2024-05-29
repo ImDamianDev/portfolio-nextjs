@@ -23,7 +23,7 @@ const cardVariants: Variants = {
 export const ContactSection = () => {
 
     return (
-        <div id="contact-section" className=''>
+        <div id="contact-section">
 
         <div id="contact-title" className='border-b-2 border-secondary w-fit ml-6 lg:ml-0 sticky top-17 mt-6'>
           <SectionTitle text="Contacto" />

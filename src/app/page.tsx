@@ -1,4 +1,3 @@
-'use client'
 import { Hero, Works, ContactSection} from "@/components";
 
 export default function HomePage() {

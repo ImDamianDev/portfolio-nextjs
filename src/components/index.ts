@@ -1,3 +1,6 @@
+// about
+export * from './about/Timeline'
+
 // contact
 export * from './contact/ContactForm'
 

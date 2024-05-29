@@ -47,12 +47,12 @@ export const Hero = () => {
                         </span>
                     </div>
 
-                    <p className='mb-2'>
+                    <p className='mb-4'>
                         En 2022, mi curiosidad me llevó a inscribirme en un bootcamp intensivo de JavaScript, una experiencia que transformó mi perspectiva.
                     </p>
 
                     <p className='mb-12'>
-                        Aunque no siempre con la constancia que desearía, desde entonces no he dejado de aprender cosas nuevas.
+                        Desde entonces no he dejado de aprender cosas nuevas.
                     </p>
 
                     <div id="hero-links" className='flex flex-col md:flex-row gap-5'>

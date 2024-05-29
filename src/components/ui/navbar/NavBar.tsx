@@ -14,7 +14,7 @@ export const NavBar = () => {
     const { navItems } = siteConfig;
 
     return (
-        <Navbar isBlurred={false} maxWidth="full" className=" bg-violet-400" onMenuOpenChange={setIsMenuOpen}>
+        <Navbar isBlurred={false} maxWidth="full" className="shadow-xl shadow-background" onMenuOpenChange={setIsMenuOpen}>
             <NavbarBrand>
                 <Link href="/" className="flex flex-row items-baseline">
                     <p className={`${titleFont.className} text-xl font-bold`}>ImDamian</p>
