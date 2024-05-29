@@ -19,7 +19,7 @@ export const Timeline: React.FC = () => {
 
         {experience.map((experience: Experience, index: number) => (
 
-          <div className={`relative grid md:grid-cols-subgrid md:col-span-2 pl-16 md:pl-0 md:gap-16`}>
+          <div key={experience.cargo} className={`relative grid md:grid-cols-subgrid md:col-span-2 pl-16 md:pl-0 md:gap-16`}>
 
             <div className={`px-3 py-4 bg-secondary/20 border-b-2 border-secondary ${index % 2 !== 0 ? 'md:col-start-2' : ''}`}>
               <h3 className="font-semibold text-secondary mb-2">{experience.cargo}</h3>
