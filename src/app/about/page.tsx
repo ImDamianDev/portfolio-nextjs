@@ -15,7 +15,7 @@ export default function AboutPage() {
 
         <div className="bg-gray-300/10 p-6 rounded-lg shadow-md text-center mt-6 mb-16">
           <p className="text-lg italic text-secondary">
-            Lo bueno de aprender algo es que nadie puede arrebatárnoslo.
+            "Lo bueno de aprender algo es que nadie puede arrebatárnoslo."
           </p>
           <p className="text-xs mt-4 text-foreground">- B.B. King</p>
         </div>
