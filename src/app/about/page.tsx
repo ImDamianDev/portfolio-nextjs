@@ -1,4 +1,4 @@
-import { SlideInLeft, Timeline } from "@/components"; // Importación del componente Timeline
+import { ScaleInCenter, SlideInLeft, Timeline } from "@/components"; // Importación del componente Timeline
 import { BiLogoTypescript } from "react-icons/bi";
 import { FaBootstrap, FaCss3Alt, FaGitAlt, FaGithub, FaHtml5, FaNodeJs, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
@@ -39,16 +39,19 @@ export default function AboutPage() {
 
         {/* Subsección de desarrollo FRONTEND */}
         <h3 className="font-semibold mb-4">Desarrollo FRONTEND</h3>
-        <div className="flex flex-row flex-wrap gap-3 mb-4">
-          <span className="border-1 border-secondary px-6 py-2 rounded-xl flex items-center gap-2"><FaHtml5 size="2em" /> HTML</span>
-          <span className="border-1 border-secondary px-6 py-2 rounded-xl flex items-center gap-2"><FaCss3Alt size="2em" /> CSS</span>
-          <span className="border-1 border-secondary px-6 py-2 rounded-xl flex items-center gap-2"><IoLogoJavascript size="2em" /> JavaScript</span>
-          <span className="border-1 border-secondary px-6 py-2 rounded-xl flex items-center gap-2"><FaBootstrap size="2em" /> Bootstrap</span>
-          <span className="border-1 border-secondary px-6 py-2 rounded-xl flex items-center gap-2"><FaReact size="2em" /> React</span>
-          <span className="border-1 border-secondary px-6 py-2 rounded-xl flex items-center gap-2"><RiNextjsFill size="2em" /> NextJs</span>
-          <span className="border-1 border-secondary px-6 py-2 rounded-xl flex items-center gap-2"><RiTailwindCssFill size="2em" /> Tailwind Css</span>
-          <span className="border-1 border-secondary px-6 py-2 rounded-xl flex items-center gap-2"><BiLogoTypescript size="2em" />TypeScript</span>
-        </div>
+        <ScaleInCenter>
+          <div className="flex flex-row flex-wrap gap-3 mb-4">
+            <span className="border-1 border-secondary px-6 py-2 rounded-xl flex items-center gap-2"><FaHtml5 size="2em" /> HTML</span>
+            <span className="border-1 border-secondary px-6 py-2 rounded-xl flex items-center gap-2"><FaCss3Alt size="2em" /> CSS</span>
+            <span className="border-1 border-secondary px-6 py-2 rounded-xl flex items-center gap-2"><IoLogoJavascript size="2em" /> JavaScript</span>
+            <span className="border-1 border-secondary px-6 py-2 rounded-xl flex items-center gap-2"><FaBootstrap size="2em" /> Bootstrap</span>
+            <span className="border-1 border-secondary px-6 py-2 rounded-xl flex items-center gap-2"><FaReact size="2em" /> React</span>
+            <span className="border-1 border-secondary px-6 py-2 rounded-xl flex items-center gap-2"><RiNextjsFill size="2em" /> NextJs</span>
+            <span className="border-1 border-secondary px-6 py-2 rounded-xl flex items-center gap-2"><RiTailwindCssFill size="2em" /> Tailwind Css</span>
+            <span className="border-1 border-secondary px-6 py-2 rounded-xl flex items-center gap-2"><BiLogoTypescript size="2em" />TypeScript</span>
+          </div>
+
+        </ScaleInCenter>
 
         {/* Subsección de desarrollo BACKEND */}
         <h3 className="font-semibold mb-4">Desarrollo BACKEND</h3>

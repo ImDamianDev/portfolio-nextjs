@@ -13,6 +13,7 @@ export * from './home/contact-section/ContactSection'
 //animations
 
 export * from './animations/SlideInLeft'
+export * from './animations/ScaleInCenter'
 
 // ui
 export * from './ui/footer/Footer';
