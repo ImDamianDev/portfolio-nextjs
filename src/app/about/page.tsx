@@ -1,4 +1,4 @@
-import { Timeline } from "@/components"; // Importación del componente Timeline
+import { SlideInLeft, Timeline } from "@/components"; // Importación del componente Timeline
 import { BiLogoTypescript } from "react-icons/bi";
 import { FaBootstrap, FaCss3Alt, FaGitAlt, FaGithub, FaHtml5, FaNodeJs, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
@@ -13,20 +13,22 @@ export default function AboutPage() {
 
         {/*  motivación */}
 
-        <div className="bg-gray-300/10 p-6 rounded-lg shadow-md text-center mt-6 mb-16">
-          <p className="text-lg italic text-secondary">
-            "Lo bueno de aprender algo es que nadie puede arrebatárnoslo."
-          </p>
-          <p className="text-xs mt-4 text-foreground">- B.B. King</p>
-        </div>
+        <SlideInLeft>
+          <div className="bg-gray-300/10 p-6 rounded-lg shadow-md text-center mt-6 mb-16">
+            <p className="text-lg italic text-secondary">
+              "Lo bueno de aprender algo es que nadie puede arrebatárnoslo."
+            </p>
+            <p className="text-xs mt-4 text-foreground">- B.B. King</p>
+          </div>
+        </SlideInLeft>
 
         {/* Sección de introducción personal */}
         <h2 className="text-xl font-bold mb-4">Sobre Mí</h2>
         <p className="mb-4">
-          ¡Hola! Soy Damian Cortés, un entusiasta de la programación aunque de profesión Ingeniero mecánico.
+          ¡Hola! Soy Damian Cortés, un entusiasta de la programación aunque Ingeniero mecánico de profesión.
         </p>
         <p className="mb-4">
-          En 2022, por curiosidad me apunté a un bootcamp intensivo de JavaScript y fue una muy buena experiencia. Ahí descubrí lo esencial que es programar como habilidad. Desde entonces y aunque no siempre con la constancia que desearía, no he dejado de aprender cosas nuevas.
+          En 2022, por curiosidad me inscribi en un bootcamp intensivo de JavaScript y fue experiencia enriquesedora. Ahí descubrí lo esencial que es programar como habilidad. Desde entonces y aunque no siempre con la constancia que desearía, no he dejado de aprender cosas nuevas.
         </p>
 
         {/* Sección de habilidades y tecnologías */}

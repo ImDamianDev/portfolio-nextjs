@@ -10,6 +10,10 @@ export * from './home/hero/Hero';
 export * from './home/works/Works'
 export * from './home/contact-section/ContactSection'
 
+//animations
+
+export * from './animations/SlideInLeft'
+
 // ui
 export * from './ui/footer/Footer';
 export * from './ui/navbar/NavBar';
