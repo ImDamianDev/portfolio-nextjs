@@ -11,17 +11,6 @@ export default function AboutPage() {
     <div className="min-h-screen m-0 p-0 mb-16">
       <div className="flex flex-col gap-3 px-6">
 
-        {/*  motivación */}
-
-        <SlideInLeft>
-          <div className="bg-gray-300/10 p-6 rounded-lg shadow-md text-center mt-6 mb-16">
-            <p className="text-lg italic text-secondary">
-              "Lo bueno de aprender algo es que nadie puede arrebatárnoslo."
-            </p>
-            <p className="text-xs mt-4 text-foreground">- B.B. King</p>
-          </div>
-        </SlideInLeft>
-
         {/* Sección de introducción personal */}
         <h2 className="text-xl font-bold mb-4">Sobre Mí</h2>
         <p className="mb-4">
@@ -50,7 +39,6 @@ export default function AboutPage() {
             <span className="border-1 border-secondary px-6 py-2 rounded-xl flex items-center gap-2"><RiTailwindCssFill size="2em" /> Tailwind Css</span>
             <span className="border-1 border-secondary px-6 py-2 rounded-xl flex items-center gap-2"><BiLogoTypescript size="2em" />TypeScript</span>
           </div>
-
         </ScaleInCenter>
 
         {/* Subsección de desarrollo BACKEND */}
@@ -77,6 +65,17 @@ export default function AboutPage() {
         <h2 className="text-xl font-bold my-6">Experiencia y Formación</h2>
         <p className="mb-4"></p>
         <Timeline /> {/* Renderización del componente Timeline */}
+
+        {/*  motivación */}
+
+        <SlideInLeft>
+          <div className="bg-gray-300/10 p-6 rounded-lg shadow-md text-center mt-6 mb-16">
+            <p className="text-lg italic text-secondary">
+              "Lo bueno de aprender algo es que nadie puede arrebatárnoslo."
+            </p>
+            <p className="text-xs mt-4 text-foreground">- B.B. King</p>
+          </div>
+        </SlideInLeft>
 
       </div>
     </div>

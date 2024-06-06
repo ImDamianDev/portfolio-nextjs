@@ -4,8 +4,8 @@ import { FramerMagnetic } from "../framer-magnetic/FramerMagnetic.jsx";
 
 export const Footer = () => {
     return (
-        <footer className="py-12 text-center text-sm font-light border-t-2 border-t-secondary">
-            <div className="flex flex-row justify-center mb-3 gap-10">
+        <footer className="py-12 text-center text-sm font-light border-t-1 border-t-secondary">
+            <div className="flex flex-row justify-center mb-3 gap-16">
                 <FramerMagnetic>
                     <a href="https://github.com/ImDamianDev/" className="hover:scale-105"><FaGithub size="2em" /></a>
                 </FramerMagnetic>
@@ -16,7 +16,7 @@ export const Footer = () => {
                     <a href="mailto:imdamian.dev@gmail.com" className="hover:scale-105"><IoMdMail size="2em" /></a>
                 </FramerMagnetic>
             </div>
-            <span className="h-[3px] rounded w-[200px] my-5 mx-auto bg-secondary flex" />
+            <span className="h-[1px] rounded w-56 my-5 mx-auto bg-secondary flex" />
             <p>Con <span className="text-red-400">&#x2665;</span> desde Chile.</p>
             <span className="flex justify-center">{new Date().getFullYear()}</span>
         </footer>

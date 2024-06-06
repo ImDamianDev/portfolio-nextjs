@@ -24,7 +24,7 @@ export const NavBar = () => {
                 </Link>
             </NavbarBrand>
 
-            <ThemeSwitch />
+            <ThemeSwitch className="hover:scale-95 transition-all" />
             
             <NavbarMenuToggle
                 aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -33,13 +33,13 @@ export const NavBar = () => {
 
             <NavbarContent className="hidden sm:flex gap-5" justify="center">
                 <NavbarItem>
-                    <Link href="/" className="text-lg ml-3 hover:scale-105 transition-all">
+                    <Link href="/" className="ml-3  hover:scale-95 transition-all">
                         <span className="text-secondary font-bold mr-1">_</ span>
                         Inicio
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link href="/about" className="text-lg ml-3 hover:scale-105 transition-all">
+                    <Link href="/about" className="ml-3 hover:scale-95 transition-all">
                         <span className="text-secondary font-bold mr-1">_</ span>
                         Sobre mí
                     </Link>
@@ -47,16 +47,16 @@ export const NavBar = () => {
             </NavbarContent>
 
 
-            <NavbarMenu className="sm:hidden flex flex-col justify-end pb-28 gap-y-5 shadow-lg">
+            <NavbarMenu className="sm:hidden flex flex-col justify-center rounded-md pb-28 gap-y-8">
                 {navItems.map((item) => (
-                    <NavbarMenuItem key={`${item}`} className="flex">
+                    <NavbarMenuItem key={`${item}`} className="flex bg-secondary/5 hover:bg-secondary/15 hover:scale-95 transition-all">
                         <Link
                             href={item.href}
                             size="lg"
-                            className="w-full py-2 justify-end transition-all"
+                            className="w-full py-2 justify-center"
                         >
                             <span className="text-secondary font-bold mr-1">_</ span>
-                            <p className="text-2xl">
+                            <p className="text-xl">
                                 {item.label}
                             </p>
                         </Link>

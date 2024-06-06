@@ -1,37 +1,20 @@
 'use client'
-import { Variants, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import React from 'react';
-
-
-const cardVariants: Variants = {
-  offscreen: {
-    x: 0,
-  },
-  onscreen: {
-    x: 100,
-    transition: {
-      type: "easeOut",
-      duration: 0.2
-    }
-  },
-};
 
 export const ScaleInCenter: React.FC<React.PropsWithChildren> = ({ children }) => {
 
   return (
 
     <motion.div
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ once: true, amount: 0.9 }}
+      initial={{
+        
+        opacity: 0,
+      }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
     >
-      <motion.div
-        variants={cardVariants}
-      >
-
-        {children}
-      </motion.div>
-
+      {children}
     </motion.div>
 
   )
