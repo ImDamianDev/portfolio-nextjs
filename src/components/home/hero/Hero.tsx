@@ -5,6 +5,7 @@ import Typed from 'typed.js';
 import { titleFont } from '@/config/fonts';
 import { ScrollToSectionButton, SectionTitle } from '@/components';
 import Link from 'next/link';
+import ImDamianIlustration from '@/components/ui/brand/ImDamianIlustration';
 
 export const Hero = () => {
 
@@ -68,6 +69,7 @@ export const Hero = () => {
                     </div>
 
                 </div>
+
 
                 <div id="hero-image" className='p-10 grid'>
                     <Image

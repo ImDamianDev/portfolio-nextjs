@@ -3,6 +3,7 @@ import { SocialLink } from '@/components';
 import Image from 'next/image';
 import { useState } from 'react';
 import { FaCopy } from 'react-icons/fa';
+import ImDamianIlustration from '../brand/ImDamianIlustration';
 
 export const Aside = () => {
 
@@ -20,14 +21,8 @@ export const Aside = () => {
     return (
         <div className="flex flex-col sm:flex-row lg:flex-col min-w-full md:min-h-full p-4 lg:border-r border-secondary/50">
 
-            <div className='flex items-start justify-center px-8'>
-                <Image
-                    src='/img/profile/imdamian.png'
-                    alt="hero-image-imdamiandev"
-                    width={350}
-                    height={350}
-                    className='rounded-full'
-                />
+            <div className='flex items-start justify-center'>
+                <ImDamianIlustration  className="rounded-full shadow-lg shadow-secondary/50 bg-secondary/60 h-fit"/>
             </div>
 
             <div className='hidden md:block sm:basis-3/4 md:ml-6 lg:ml-0 text-center md:text-left'>

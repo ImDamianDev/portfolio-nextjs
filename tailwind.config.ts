@@ -29,9 +29,12 @@ const config: Config = {
               foreground: "#FFFFFF",
               DEFAULT: "#62B9B3",
             },
+            content2: "#0F172A",
+            content3:"#0F172A",
+            content4:"#0F172A",
             // ... rest of the colors
           },
-          
+
         },
         dark: {
           colors: {
@@ -47,6 +50,10 @@ const config: Config = {
               foreground: "#FFFFFF",
               DEFAULT: "#62B9B3",
             },
+            content2: "#0F172A",
+            content3: "#62B9B3",
+            content4:"#0F172A",
+
           },
           // ... rest of the colors
         }
