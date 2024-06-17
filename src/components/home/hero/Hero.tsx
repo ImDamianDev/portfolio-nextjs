@@ -94,15 +94,15 @@ export const Hero = () => {
                         Damian
                     </motion.h1>
 
-                    <motion.p variants={itemVariants} className="mb-4 text-sm lg:text-lg">
+                    <motion.p variants={itemVariants} className="mb-4 text-sm lg:text-base">
                         Ingeniero Mecánico de profesión, apasionado por la tecnología y el <span ref={typedRef} className="font-mono text-secondary"></span>
                     </motion.p>
 
-                    <motion.p variants={itemVariants} className="mb-4 text-sm lg:text-lg">
+                    <motion.p variants={itemVariants} className="mb-4 text-sm lg:text-base">
                         En 2022, mi curiosidad me llevó a inscribirme en un bootcamp intensivo de <strong className='text-secondary'>JavaScript</strong>, transformando mi perspectiva y habilidades.
                     </motion.p>
 
-                    <motion.p variants={itemVariants} className="mb-4 text-sm lg:text-lg">
+                    <motion.p variants={itemVariants} className="mb-4 text-sm lg:text-base">
                         ¿Quieres saber más sobre mí y ver en qué he estado trabajando? Echa un vistazo.
                     </motion.p>
 
@@ -114,7 +114,7 @@ export const Hero = () => {
                     >
                         <Link
                             href="/about"
-                            className="w-full text-center py-2 px-8 border border-secondary rounded-full text-secondary hover:bg-secondary hover:text-foreground hover:scale-105 hover:font-bold focus:scale-95 transition-all"
+                            className="text-center py-2 px-8 border border-secondary rounded-full text-secondary hover:bg-secondary hover:text-foreground hover:scale-105 hover:font-bold focus:scale-95 transition-all"
                         >
                             <motion.div variants={item2Variants}>
                                 Sobre mí
@@ -123,7 +123,7 @@ export const Hero = () => {
 
                         <ScrollToSectionButton
                             targetId="study-cases"
-                            className="w-full text-center py-2 px-8 border border-secondary rounded-full text-secondary hover:bg-secondary hover:text-foreground hover:scale-105 hover:font-bold transition-all"
+                            className="text-center py-2 px-8 border border-secondary rounded-full text-secondary hover:bg-secondary hover:text-foreground hover:scale-105 hover:font-bold transition-all"
                         >
                             <motion.div variants={item2Variants}>
                                 Portafolio
