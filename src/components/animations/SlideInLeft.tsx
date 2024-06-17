@@ -5,7 +5,7 @@ import React from 'react';
 
 const cardVariants: Variants = {
   offscreen: {
-    x: -150,
+    x: -50,
     opacity: 0,
   },
   onscreen: {
