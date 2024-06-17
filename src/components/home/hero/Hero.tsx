@@ -89,20 +89,20 @@ export const Hero = () => {
 
                     <motion.h1
                         variants={itemVariants}
-                        className={`${titleFont.className} text-secondary text-5xl lg:text-7xl font-bold antialiased -my-1 mb-6`}
+                        className={`${titleFont.className} text-secondary text-5xl lg:text-7xl font-bold antialiased -mt-1 mb-6`}
                     >
                         Damian
                     </motion.h1>
 
-                    <motion.p variants={itemVariants} className="mb-4 text-sm lg:text-base">
+                    <motion.p variants={itemVariants} className="mb-2 text-sm lg:text-base">
                         Ingeniero Mecánico de profesión, apasionado por la tecnología y el <span ref={typedRef} className="font-mono text-secondary"></span>
                     </motion.p>
 
-                    <motion.p variants={itemVariants} className="mb-4 text-sm lg:text-base">
+                    <motion.p variants={itemVariants} className="mb-2 text-sm lg:text-base">
                         En 2022, mi curiosidad me llevó a inscribirme en un bootcamp intensivo de <strong className='text-secondary'>JavaScript</strong>, transformando mi perspectiva y habilidades.
                     </motion.p>
 
-                    <motion.p variants={itemVariants} className="mb-4 text-sm lg:text-base">
+                    <motion.p variants={itemVariants} className="mb-2 text-sm lg:text-base">
                         ¿Quieres saber más sobre mí y ver en qué he estado trabajando? Echa un vistazo.
                     </motion.p>
 
