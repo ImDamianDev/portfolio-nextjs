@@ -1,9 +1,11 @@
 'use client'
-import { SocialLink } from '@/components';
-import Image from 'next/image';
+
+import { SocialLink } from '@/components';;
 import { useState } from 'react';
 import { FaCopy } from 'react-icons/fa';
 import ImDamianIlustration from '../brand/ImDamianIlustration';
+// Importación de animaciones
+import { motion } from "framer-motion";
 
 export const Aside = () => {
 
@@ -21,9 +23,9 @@ export const Aside = () => {
     return (
         <div className="flex flex-col sm:flex-row lg:flex-col min-w-full md:min-h-full p-4 lg:border-r border-secondary/50">
 
-            <div className='flex items-start justify-center'>
-                <ImDamianIlustration  className="rounded-full shadow-lg shadow-secondary/50 bg-secondary/60 h-fit"/>
-            </div>
+            <motion.div className='flex items-start justify-center'>
+                <ImDamianIlustration  className="rounded-full shadow-lg shadow-secondary/50 bg-secondary/60 h-[250px] w-[250px] sm:h-fit"/>
+            </motion.div>
 
             <div className='hidden md:block sm:basis-3/4 md:ml-6 lg:ml-0 text-center md:text-left'>
 

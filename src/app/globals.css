@@ -8,23 +8,3 @@
         z-index: 1;
     }
 }
-
-.pulse {
-    animation-name: pulse;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes pulse {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-3px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}

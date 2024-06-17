@@ -53,7 +53,6 @@ const config: Config = {
             content2: "#0F172A",
             content3: "#62B9B3",
             content4:"#0F172A",
-
           },
           // ... rest of the colors
         }

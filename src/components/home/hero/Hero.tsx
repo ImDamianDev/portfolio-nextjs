@@ -1,88 +1,154 @@
-"use client"
+"use client";
+
 import Image from 'next/image';
 import React, { useRef, useEffect } from 'react';
-import Typed from 'typed.js';
-import { titleFont } from '@/config/fonts';
-import { ScrollToSectionButton, SectionTitle } from '@/components';
 import Link from 'next/link';
-import ImDamianIlustration from '@/components/ui/brand/ImDamianIlustration';
+// Importación de fuentes
+import { titleFont } from '@/config/fonts';
+// Importación de componentes
+import { ScrollToSectionButton, SectionTitle } from '@/components';
+// Importación de animaciones
+import { motion } from "framer-motion";
+import Typed from 'typed.js';
+
+// Variantes de animación para el contenedor principal
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            delayChildren: 0.3,
+            staggerChildren: 0.2,
+        },
+    },
+};
+
+// Variantes de animación para los elementos secundarios (vertical)
+const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1,
+    },
+};
+
+// Variantes de animación para los elementos secundarios (horizontal)
+const item2Variants = {
+    hidden: { x: -50, opacity: 0 },
+    visible: {
+        x: 0,
+        opacity: 1,
+    },
+};
 
 export const Hero = () => {
-
     const typedRef = useRef(null);
 
+    // Configuración de la animación de escritura con Typed.js
     useEffect(() => {
         const typed = new Typed(typedRef.current, {
-            strings: ['Desarrollador web.',],
+            strings: ['Desarrollo web.'],
             typeSpeed: 100,
             backSpeed: 110,
-            loop: true
+            loop: true,
         });
 
+        // Limpieza al desmontar el componente
         return () => {
             typed.destroy();
-        }
+        };
     }, []);
 
-
     return (
-        <div id="hero" className='lg:min-h-[90vh]'>
+        // Contenedor principal con animación
+        <motion.div
+            id="hero"
+            className="lg:min-h-[90vh]"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+        >
+            {/* Título de la sección con animación */}
+            <motion.div
+                variants={itemVariants}
+                className="hidden sm:block border-b-2 border-secondary w-fit ml-6 lg:ml-0 sticky top-17 mt-6"
+            >
+                <SectionTitle text="Presentación" />
+            </motion.div>
 
-            <div className='border-b-2 border-secondary w-fit ml-6 lg:ml-0 sticky top-17 mt-6'>
-                <SectionTitle text="Presentacion" />
-            </div>
-
-            <div id="hero-body" className='grid md:grid-cols-2 lg:min-h-[80vh]'>
-
-                <div id="hero-description" className='grid content-center pt-8 px-6 md:py-6 lg:p-0'>
-
-                    <p className='text-lg'>
+            {/* Cuerpo principal del héroe, dividido en dos columnas */}
+            <div id="hero-body" className="grid md:grid-cols-2 lg:min-h-[80vh]">
+                {/* Descripción y enlaces en la primera columna */}
+                <div
+                    id="hero-description"
+                    className="grid content-center pt-8 px-6 md:py-6 lg:p-0"
+                >
+                    <motion.p variants={itemVariants} className="text-lg">
                         ¡Hola! Soy
-                    </p>
-                    <h1 className={`${titleFont.className} text-secondary text-5xl lg:text-7xl font-bold antialiased -my-1`}>
+                    </motion.p>
+
+                    <motion.h1
+                        variants={itemVariants}
+                        className={`${titleFont.className} text-secondary text-5xl lg:text-7xl font-bold antialiased -my-1 mb-6`}
+                    >
                         Damian
-                    </h1>
+                    </motion.h1>
 
-                    <div className='text-lg h-6 text-secondary/50 mb-6'>
-                        <span ref={typedRef} className='w-fit'>
-                        </span>
-                    </div>
+                    <motion.p variants={itemVariants} className="mb-4 text-sm lg:text-lg">
+                        Ingeniero Mecánico de profesión, apasionado por la tecnología y el <span ref={typedRef} className="font-mono text-secondary"></span>
+                    </motion.p>
 
-                    <p className='mb-4'>
-                        En 2022, mi curiosidad me llevó a inscribirme en un bootcamp intensivo de JavaScript, una experiencia que transformó mi perspectiva.
-                    </p>
+                    <motion.p variants={itemVariants} className="mb-4 text-sm lg:text-lg">
+                        En 2022, mi curiosidad me llevó a inscribirme en un bootcamp intensivo de <strong className='text-secondary'>JavaScript</strong>, transformando mi perspectiva y habilidades.
+                    </motion.p>
 
-                    <p className='mb-12'>
-                        Desde entonces no he dejado de aprender cosas nuevas.
-                    </p>
+                    <motion.p variants={itemVariants} className="mb-4 text-sm lg:text-lg">
+                        ¿Quieres saber más sobre mí y ver en qué he estado trabajando? Echa un vistazo.
+                    </motion.p>
 
-                    <div id="hero-links" className='flex flex-col md:flex-row gap-5'>
-                        <Link href="/about" className='text-center py-3 px-8 border border-secondary rounded-md text-secondary hover:bg-secondary hover:text-foreground hover:scale-105 hover:font-bold transition-all'
+                    {/* Enlaces a otras secciones */}
+                    <motion.div
+                        id="hero-links"
+                        className="flex flex-row md:flex-row gap-3 mt-6"
+                        variants={itemVariants}
+                    >
+                        <Link
+                            href="/about"
+                            className="w-full text-center py-2 px-8 border border-secondary rounded-full text-secondary hover:bg-secondary hover:text-foreground hover:scale-105 hover:font-bold focus:scale-95 transition-all"
                         >
-                            Sobre mi
+                            <motion.div variants={item2Variants}>
+                                Sobre mí
+                            </motion.div>
                         </Link>
 
-                        <ScrollToSectionButton targetId="study-cases" className="text-center py-3 px-8 border border-secondary rounded-md text-secondary hover:bg-secondary hover:text-foreground hover:scale-105 hover:font-bold transition-all">
-                            <span>Portafolio</span>
+                        <ScrollToSectionButton
+                            targetId="study-cases"
+                            className="w-full text-center py-2 px-8 border border-secondary rounded-full text-secondary hover:bg-secondary hover:text-foreground hover:scale-105 hover:font-bold transition-all"
+                        >
+                            <motion.div variants={item2Variants}>
+                                Portafolio
+                            </motion.div>
                         </ScrollToSectionButton>
 
-                    </div>
 
+                    </motion.div>
                 </div>
 
-
-                <div id="hero-image" className='p-10 grid'>
+                {/* Imagen ilustrativa en la segunda columna */}
+                <motion.div
+                    id="hero-image"
+                    className="hidden sm:block p-10"
+                    variants={item2Variants}
+                >
                     <Image
-                        src='/img/hero_ilustration.svg'
-                        alt="hero-ilustration"
+                        src="/img/hero_ilustration.svg"
+                        alt="Ilustración del héroe"
                         width={500}
                         height={500}
-                        className='my-auto scale-110 -z-10'
+                        className="my-auto scale-110 -z-10"
                     />
-                </div>
-
+                </motion.div>
             </div>
-
-        </div>
-    )
-}
+        </motion.div>
+    );
+};
