@@ -61,7 +61,7 @@ export const Hero = () => {
 
     return (
         // Contenedor principal con animación
-        <motion.div
+        <motion.section
             id="hero"
             className="lg:min-h-[90vh]"
             variants={containerVariants}
@@ -81,12 +81,12 @@ export const Hero = () => {
                 {/* Descripción y enlaces en la primera columna */}
                 <div
                     id="hero-description"
-                    className="grid content-center pt-8 px-6 md:py-6 lg:p-0"
+                    className="grid content-center px-6 md:py-6 lg:p-0"
                 >
                     <motion.p variants={itemVariants} className="text-lg">
                         ¡Hola! Soy
                     </motion.p>
-
+                    
                     <motion.h1
                         variants={itemVariants}
                         className={`${titleFont.className} text-secondary text-5xl lg:text-7xl font-bold antialiased -mt-1 mb-6`}
@@ -94,21 +94,20 @@ export const Hero = () => {
                         Damian
                     </motion.h1>
 
-                    <motion.p variants={itemVariants} className="mb-2 text-sm lg:text-base">
+                    <motion.p variants={itemVariants} className="mb-3 text-sm font-light">
                         Ingeniero Mecánico de profesión, apasionado por la tecnología y el <span ref={typedRef} className="font-mono text-secondary"></span>
                     </motion.p>
 
-                    <motion.p variants={itemVariants} className="mb-2 text-sm lg:text-base">
+                    <motion.p variants={itemVariants} className="mb-3 text-sm font-light">
                         En 2022, mi curiosidad me llevó a inscribirme en un bootcamp intensivo de <strong className='text-secondary'>JavaScript</strong>, transformando mi perspectiva y habilidades.
                     </motion.p>
 
-                    <motion.p variants={itemVariants} className="mb-2 text-sm lg:text-base">
+                    <motion.p variants={itemVariants} className="text-sm font-light">
                         ¿Quieres saber más sobre mí y ver en qué he estado trabajando? Echa un vistazo.
                     </motion.p>
 
                     {/* Enlaces a otras secciones */}
                     <motion.div
-                        id="hero-links"
                         className="flex flex-row md:flex-row gap-3 mt-6"
                         variants={itemVariants}
                     >
@@ -145,10 +144,10 @@ export const Hero = () => {
                         alt="Ilustración del héroe"
                         width={500}
                         height={500}
-                        className="my-auto scale-110 -z-10"
+                        className="my-auto"
                     />
                 </motion.div>
             </div>
-        </motion.div>
+        </motion.section>
     );
 };
