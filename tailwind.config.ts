@@ -17,18 +17,10 @@ const config: Config = {
       themes: {
         light: {
           colors: {
-            background: "#F7F7F7", // or DEFAULT
-            foreground: "#1B688D", // or 50 to 900 DEFAULT
-            primary: {
-              //... 50 to 900
-              foreground: "#FFFFFF",
-              DEFAULT: "#1B688D",
-            },
-            secondary: {
-              //... 50 to 900
-              foreground: "#FFFFFF",
-              DEFAULT: "#62B9B3",
-            },
+            background: "#F7F7F7", // background color
+            foreground: "#1B688D", // text color
+            primary: "#1B688D",
+            secondary:"#62B9B3", //
             content2: "#0F172A",
             content3:"#0F172A",
             content4:"#0F172A",
@@ -38,21 +30,14 @@ const config: Config = {
         },
         dark: {
           colors: {
-            background: "#0F172A", // or DEFAULT
-            foreground: "#F7F7F7", // or 50 to 900 DEFAULT
-            primary: {
-              //... 50 to 900
-              foreground: "#F7F7F7",
-              DEFAULT: "#F7F7F7",
-            },
-            secondary: {
-              //... 50 to 900
-              foreground: "#FFFFFF",
-              DEFAULT: "#62B9B3",
-            },
+            background: "#0F172A", // background color
+            foreground: "#F7F7F7", // text color
+            primary: "#1B688D",
+            secondary:"#62B9B3", //
             content2: "#0F172A",
-            content3: "#62B9B3",
+            content3:"#0F172A",
             content4:"#0F172A",
+            // ... rest of the colors
           },
           // ... rest of the colors
         }

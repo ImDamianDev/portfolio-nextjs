@@ -15,13 +15,11 @@ interface Project {
 export const Works: React.FC = () => {
   return (
 
-    <div id="study-cases" className='lg:min-h-[90vh]'>
+    <div id="study-cases">
 
-      <div className='border-b-2 border-secondary w-fit ml-6 lg:ml-0 sticky top-17 my-12'>
-        <SectionTitle text="Casos de estudio" />
-      </div>
+      <SectionTitle text="Casos de estudio" />
 
-      <div id="hero-body" className='grid gap-12'>
+      <div className='grid gap-12'>
 
         {projects.map((project: Project) => (
           <WorksCard key={project.repoUrl} data={project} />

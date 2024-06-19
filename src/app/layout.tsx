@@ -21,23 +21,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <NavBar />
-          <div className="grid grid-cols-1 lg:grid-cols-12 max-w-[1600px] mx-auto">
-
-            <div className="lg:col-span-3 lg:flex sticky lg:py-4 lg:px-6 md:min-h-fit lg:h-[92vh] lg:top-16 min-w-[18.5rem]">
-
-              <Aside/>
-
-            </div>
-
-            <div className="lg:col-span-9 lg:pt-4 lg:px-6">
-              <main className="relative rounded-xl transition-all">
-                {children}
-                <Footer />
-              </main>
-            </div>
-
-
-          </div>
+          <main className="max-w-screen-lg mx-auto">
+            {children}
+            <Footer />
+          </main>
         </Providers>
         <ScrollToTopButton />
       </body>

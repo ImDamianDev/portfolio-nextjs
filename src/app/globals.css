@@ -8,3 +8,11 @@
         z-index: 1;
     }
 }
+
+.outlined-text {
+    text-shadow:
+        -1px -1px 0 #62B9B3,
+        1px -1px 0 #62B9B3,
+        -1px 1px 0 #62B9B3,
+        1px 1px 0 #62B9B3;
+}
