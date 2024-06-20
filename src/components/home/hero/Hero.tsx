@@ -120,7 +120,7 @@ export const Hero = () => {
                 variants={item2Variants}
             >
                 <Image
-                    src="/img/imdamian_profile_img_v3.svg"
+                    src="/img/imdamian_profile_img_v4.svg"
                     alt="Ilustración del héroe"
                     width={500}
                     height={500}
