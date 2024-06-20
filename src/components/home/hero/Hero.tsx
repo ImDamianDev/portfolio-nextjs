@@ -69,10 +69,9 @@ export const Hero = () => {
             animate="visible"
         >
             {/* Descripción y enlaces en la primera columna */}
-            <div
-                className="grid content-center px-6"
-            >
-                <motion.p variants={itemVariants} className="text-xl">
+            <div className="grid content-center px-6">
+
+                <motion.p variants={itemVariants} className="mt-8 sm:m-0 text-xl">
                     ¡Hola! Soy
                 </motion.p>
 
@@ -89,7 +88,7 @@ export const Hero = () => {
 
                 {/* Enlaces a otras secciones */}
                 <motion.div
-                    className="flex flex-row md:flex-row gap-3 mt-12"
+                    className="flex flex-row md:flex-row gap-3 mt-6"
                     variants={itemVariants}
                 >
                     <Link
@@ -121,11 +120,11 @@ export const Hero = () => {
                 variants={item2Variants}
             >
                 <Image
-                    src="/img/imdamian_profile_img_v2.svg"
+                    src="/img/imdamian_profile_img_v3.svg"
                     alt="Ilustración del héroe"
                     width={500}
                     height={500}
-                    className="my-auto bg-secondary/15 rounded-xl p-4"
+                    className="my-auto p-4"
                 />
             </motion.div>
 
