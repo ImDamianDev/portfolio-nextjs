@@ -91,18 +91,19 @@ export const Hero = () => {
                     className="flex flex-row md:flex-row gap-3 mt-6"
                     variants={itemVariants}
                 >
-                    <Link
-                        href="/about"
-                        className="text-center py-2 px-8 border border-secondary rounded-full text-secondary hover:bg-secondary hover:text-foreground hover:scale-105 hover:font-bold focus:scale-95 transition-all"
+
+                    <ScrollToSectionButton
+                        targetId="about-me"
+                        className="text-center py-2 px-8 border border-secondary rounded-xl text-secondary hover:bg-secondary hover:text-foreground hover:scale-105 hover:font-bold transition-all"
                     >
                         <motion.div variants={item2Variants}>
-                            Sobre mí
+                            Sobre Mí
                         </motion.div>
-                    </Link>
+                    </ScrollToSectionButton>
 
                     <ScrollToSectionButton
                         targetId="study-cases"
-                        className="text-center py-2 px-8 border border-secondary rounded-full text-secondary hover:bg-secondary hover:text-foreground hover:scale-105 hover:font-bold transition-all"
+                        className="text-center py-2 px-8 border border-secondary rounded-xl text-secondary hover:bg-secondary hover:text-foreground hover:scale-105 hover:font-bold transition-all"
                     >
                         <motion.div variants={item2Variants}>
                             Proyectos

@@ -39,7 +39,7 @@ export const NavBar = () => {
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link href="/about" className="ml-3 hover:scale-95 transition-all">
+                    <Link href="#about-me" className="ml-3 hover:scale-95 transition-all">
                         <span className="text-secondary font-bold mr-1">_</ span>
                         Sobre mí
                     </Link>

@@ -10,7 +10,7 @@ export const siteConfig = {
         },
         {
             label: "Sobre mí",
-            href: "/about",
+            href: "about-me",
         },
     ],
     socialMedia: [

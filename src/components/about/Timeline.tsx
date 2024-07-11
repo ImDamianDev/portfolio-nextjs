@@ -13,7 +13,7 @@ interface Experience {
 export const Timeline: React.FC = () => {
   return (
     <>
-      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[800px] mx-auto pb-8">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[700px] mx-auto pb-8">
 
         <div className="bg-secondary absolute h-full w-1 left-[26px] rounded md:inset-x-1/2" />
 
@@ -21,7 +21,7 @@ export const Timeline: React.FC = () => {
 
           <div key={experience.cargo} className={`relative grid md:grid-cols-subgrid md:col-span-2 pl-16 md:pl-0 md:gap-16`}>
 
-            <div className={`px-3 py-4 bg-secondary/20 border-b-2 border-secondary ${index % 2 !== 0 ? 'md:col-start-2' : ''}`}>
+            <div className={`px-3 py-4 rounded-xl bg-secondary/20 border-b-2 border-secondary ${index % 2 !== 0 ? 'md:col-start-2' : ''}`}>
               <h3 className="font-semibold text-secondary mb-2">{experience.cargo}</h3>
               <p className="text-xs mb-2">{experience.lugar}</p>
               <p className="text-xs">{experience.fecha}</p>
