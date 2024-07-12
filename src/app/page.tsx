@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen m-0 p-0 text-sm">
+    <div className="min-h-screen m-0 p-0">
 
       <Hero />
 

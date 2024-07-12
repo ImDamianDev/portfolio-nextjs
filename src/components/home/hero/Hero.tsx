@@ -117,7 +117,7 @@ export const Hero = () => {
             {/* Imagen ilustrativa en la segunda columna */}
             <motion.div
                 id="hero-image"
-                className="p-6"
+                className=""
                 variants={item2Variants}
             >
                 <Image
