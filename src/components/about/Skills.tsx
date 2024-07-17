@@ -13,107 +13,70 @@ import { SiExpress } from "react-icons/si";
 import { motion } from "framer-motion";
 // Importacion de variantes de animacion personalizadas
 import { fadeIn, slideInFromLeft, sectionVariants } from '../animations/Variants';
+import { BsPerson } from "react-icons/bs";
 
 export const SkillsSection: React.FC = () => {
     return (
-        <motion.section
-            variants={fadeIn}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
-        >
+        <section id="skills">
 
-            <motion.div variants={slideInFromLeft}>
+            <div className='flex items-center mb-8 gap-3 text-secondary'>
+                <BsPerson size="1.5em" />
                 <TitleSection text="Habilidades y Tecnologias" />
-            </motion.div>
+            </div>
 
-            <motion.p variants={fadeIn} viewport={{ once: true, amount: 0.2 }} className="mb-3">
-                Durante la formación, aprendí tecnologías y herramientas como HTML, CSS, JavaScript, Bootstrap, Git, Github, Node Js aunque he seguido aprendiendo también sobre React, NextJs, Tailwind CSS y Typescript.
-            </motion.p>
 
-            {/* Subsección de desarrollo FRONTEND */}
-            <motion.h3
-                variants={slideInFromLeft}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.6 }}
-                className="font-semibold mt-6 mb-3"
-            >
-                Desarrollo FRONTEND
-            </motion.h3>
+            <div className="grid lg:grid-cols-2 gap-6 items-center">
 
-            <motion.ul
-                variants={sectionVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.4 }}
-                className="flex flex-row flex-wrap gap-3">
-                <motion.li variants={slideInFromLeft} className="border-1 border-secondary px-3 py-2 rounded-xl flex items-center gap-2"><FaHtml5 size="1.5em" /> HTML</motion.li>
-                <motion.li variants={slideInFromLeft} className="border-1 border-secondary px-3 py-2 rounded-xl flex items-center gap-2"><FaCss3Alt size="1.5em" /> CSS</motion.li>
-                <motion.li variants={slideInFromLeft} className="border-1 border-secondary px-3 py-2 rounded-xl flex items-center gap-2"><IoLogoJavascript size="1.5em" /> JavaScript</motion.li>
-                <motion.li variants={slideInFromLeft} className="border-1 border-secondary px-3 py-2 rounded-xl flex items-center gap-2"><FaBootstrap size="1.5em" /> Bootstrap</motion.li>
-                <motion.li variants={slideInFromLeft} className="border-1 border-secondary px-3 py-2 rounded-xl flex items-center gap-2"><FaReact size="1.5em" /> React</motion.li>
-                <motion.li variants={slideInFromLeft} className="border-1 border-secondary px-3 py-2 rounded-xl flex items-center gap-2"><RiNextjsFill size="1.5em" /> NextJs</motion.li>
-                <motion.li variants={slideInFromLeft} className="border-1 border-secondary px-3 py-2 rounded-xl flex items-center gap-2"><RiTailwindCssFill size="1.5em" /> Tailwind Css</motion.li>
-                <motion.li variants={slideInFromLeft} className="border-1 border-secondary px-3 py-2 rounded-xl flex items-center gap-2"><BiLogoTypescript size="1.5em" />TypeScript</motion.li>
-            </motion.ul>
+                <div>
+                    <p className="text-foreground/75 mb-3">
+                        Durante la formación, aprendí tecnologías y herramientas como HTML, CSS, JavaScript, Bootstrap, Git, Github, Node Js aunque he seguido aprendiendo también sobre React, NextJs, Tailwind CSS y Typescript.
+                    </p>
+                    <p className="text-foreground/75 ">
+                        Con estas habilidades, por el momento he desarrollado varios proyectos web (casos de estudio), incluido este portafolio en el que estás navegando.
+                    </p>
+                </div>
 
-            {/* Subsección de desarrollo BACKEND */}
-            <motion.h3
-                variants={slideInFromLeft}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                className="font-semibold mt-6 mb-3"
-            >
-                Desarrollo BACKEND
-            </motion.h3>
+                <div className="grid sm:grid-rows-2 sm:grid-flow-col sm:gap-3 lg:order-first">
 
-            <motion.ul
-                variants={sectionVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.8 }}
-                className="flex flex-row flex-wrap gap-3"
-            >
-                <motion.li variants={slideInFromLeft} className="border-1 border-secondary px-4 py-2 rounded-xl flex items-center gap-2"><FaNodeJs size="1.5em" /> Node Js</motion.li>
-                <motion.li variants={slideInFromLeft} className="border-1 border-secondary px-4 py-2 rounded-xl flex items-center gap-2"><SiExpress size="1.5em" /> Express Js</motion.li>
-                <motion.li variants={slideInFromLeft} className="border-1 border-secondary px-4 py-2 rounded-xl flex items-center gap-2"><IoLogoJavascript size="1.5em" /> JavaScript</motion.li>
-            </motion.ul>
+                    <div className="row-span-2 bg-secondary/5 rounded-xl">
+                        <h3 className="py-1 mb-6 bg-secondary/20 rounded-xl text-center text-secondary"> Desarrollo FRONTEND</h3>
 
-            {/* Subsección de control de versiones */}
-            <motion.h3
-                variants={slideInFromLeft}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                className="font-semibold mt-6 mb-3"
-            >
-                Control de versiones
-            </motion.h3>
+                        <ul className="flex flex-row flex-wrap gap-3">
+                            <li className="justify-center bg-secondary/10 px-2 py-1.5 rounded-xl flex items-center gap-1 text-sm"><FaHtml5 size="1.5em" /> HTML</li>
+                            <li className="justify-center bg-secondary/10 px-2 py-1.5 rounded-xl flex items-center gap-1 text-sm grow"><FaCss3Alt size="1.5em" /> CSS</li>
+                            <li className="justify-center bg-secondary/10 px-2 py-1.5 rounded-xl flex items-center gap-1 text-sm grow"><IoLogoJavascript size="1.5em" /> JavaScript</li>
+                            <li className="justify-center bg-secondary/10 px-2 py-1.5 rounded-xl flex items-center gap-1 text-sm"><FaBootstrap size="1.5em" /> Bootstrap</li>
+                            <li className="justify-center bg-secondary/10 px-2 py-1.5 rounded-xl flex items-center gap-1 text-sm grow"><FaReact size="1.5em" /> React</li>
+                            <li className="justify-center bg-secondary/10 px-2 py-1.5 rounded-xl flex items-center gap-1 text-sm grow"><RiNextjsFill size="1.5em" /> NextJs</li>
+                            <li className="justify-center bg-secondary/10 px-2 py-1.5 rounded-xl flex items-center gap-1 text-sm grow"><RiTailwindCssFill size="1.5em" /> Tailwind Css</li>
+                            <li className="justify-center bg-secondary/10 px-2 py-1.5 rounded-xl flex items-center gap-1 text-sm grow"><BiLogoTypescript size="1.5em" />TypeScript</li>
+                        </ul>
+                    </div>
 
-            <motion.ul
-                variants={sectionVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.8 }}
-                className="flex flex-row flex-wrap gap-3"
-            >
-                <motion.li variants={slideInFromLeft} className="border-1 border-secondary px-4 py-2 rounded-xl flex items-center gap-2"><FaGitAlt size="1.5em" /> Git</motion.li>
-                <motion.li variants={slideInFromLeft} className="border-1 border-secondary px-4 py-2 rounded-xl flex items-center gap-2"><FaGithub size="1.5em" /> GitHub</motion.li>
-            </motion.ul>
+                    <div className="col-span-2 bg-secondary/5 rounded-xl mt-3 sm:mt-0">
+                        <h3 className="py-1 mb-6 bg-secondary/20 rounded-xl text-center text-secondary">Desarrollo BACKEND</h3>
 
-            {/* Comentario sobre la experiencia y motivación */}
-            <motion.p
-                variants={fadeIn}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 1 }}
-                className="mt-6"
-            >
-                Con estas habilidades, por el momento he desarrollado varios proyectos web (casos de estudio), incluido este portafolio en el que estás navegando.
-            </motion.p>
+                        <ul className="flex flex-row flex-wrap gap-3">
+                            <li className="justify-center bg-secondary/10 px-2 py-1.5 rounded-xl flex items-center gap-1 text-sm grow"><FaNodeJs size="1.5em" /> Node Js</li>
+                            <li className="justify-center bg-secondary/10 px-2 py-1.5 rounded-xl flex items-center gap-1 text-sm"><SiExpress size="1.5em" /> Express Js</li>
+                            <li className="justify-center bg-secondary/10 px-2 py-1.5 rounded-xl flex items-center gap-1 text-sm grow"><IoLogoJavascript size="1.5em" /> JavaScript</li>
+                        </ul>
+                    </div>
 
-        </motion.section>
+                    <div className="col-span-2 bg-secondary/5 rounded-xl mt-3 sm:mt-0">
+                        <h3 className="py-1 mb-6 bg-secondary/20 rounded-xl text-center text-secondary">Control de versiones</h3>
+
+                        <ul className="flex flex-row flex-wrap gap-3">
+                            <li className="justify-center bg-secondary/10 px-2 py-1.5 rounded-xl flex items-center gap-1 text-sm grow"><FaGitAlt size="1.5em" /> Git</li>
+                            <li className="justify-center bg-secondary/10 px-2 py-1.5 rounded-xl flex items-center gap-1 text-sm grow"><FaGithub size="1.5em" /> GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </section>
     );
 };
