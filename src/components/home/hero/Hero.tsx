@@ -2,44 +2,16 @@
 
 import Image from 'next/image';
 import React, { useRef, useEffect } from 'react';
-import Link from 'next/link';
 // Importación de fuentes
 import { titleFont } from '@/config/fonts';
 // Importación de componentes
-import { ScrollToSectionButton, SectionTitle } from '@/components';
+import { ScrollToSectionButton } from '@/components';
 // Importación de animaciones
-import { motion } from "framer-motion";
 import Typed from 'typed.js';
 
-// Variantes de animación para el contenedor principal
-const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            delayChildren: 0.3,
-            staggerChildren: 0.2,
-        },
-    },
-};
-
-// Variantes de animación para los elementos secundarios (vertical)
-const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-        y: 0,
-        opacity: 1,
-    },
-};
-
-// Variantes de animación para los elementos secundarios (horizontal)
-const item2Variants = {
-    hidden: { x: -50, opacity: 0 },
-    visible: {
-        x: 0,
-        opacity: 1,
-    },
-};
+// Importación de iconos
+import { BsPerson } from 'react-icons/bs';
+import { FaCode } from 'react-icons/fa6';
 
 export const Hero = () => {
     const typedRef = useRef(null);
@@ -61,74 +33,68 @@ export const Hero = () => {
 
     return (
         // Contenedor principal con animación
-        <motion.section
+        <section
             id="hero"
-            className="grid md:grid-cols-2 min-h-[80vh] content-center"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
+            className="grid sm:grid-cols-3 content-center"
         >
+
+            {/* Imagen ilustrativa en la segunda columna */}
+            <Image
+                src="/img/imdamian_profile_img.svg"
+                alt="Ilustración del héroe"
+                width={250}
+                height={250}
+                className="w-[80px] h-[80px] sm:mx-auto sm:w-auto sm:h-auto lg:max-h-[250px] my-auto rounded-full border-2 border-secondary"
+            />
+
             {/* Descripción y enlaces en la primera columna */}
-            <div className="grid content-center px-6">
+            <div className="sm:col-span-2 sm:ps-6 content-center">
 
-                <motion.p variants={itemVariants} className="mt-8 sm:m-0 text-xl">
+                <p className="mt-4 sm:m-0 text-xl">
                     ¡Hola! Soy
-                </motion.p>
+                </p>
 
-                <motion.h1
-                    variants={itemVariants}
-                    className={`${titleFont.className} outlined-text text-background text-7xl font-bold antialiased -mt-1 mb-6`}
+                <h1
+                    className={`${titleFont.className} outlined-text text-background text-7xl font-bold antialiased -mt-1 mb-4`}
                 >
                     Damian
-                </motion.h1>
+                </h1>
 
-                <motion.p variants={itemVariants} className="lg:text-xl text-foreground/75">
-                    Ingeniero Mecánico de profesión, apasionado por la tecnología y el <span ref={typedRef} className="font-mono text-secondary"></span>
-                </motion.p>
+                <p className="dark:text-foreground/75 text-lg sm:pr-16">
+                    Ingeniero Mecánico de profesión con +8 años de experiencia, apasionado por la tecnología y el <span ref={typedRef} className="font-mono text-secondary"></span>
+                </p>
 
                 {/* Enlaces a otras secciones */}
-                <motion.div
-                    className="flex flex-row md:flex-row gap-3 mt-6"
-                    variants={itemVariants}
+                <div
+                    className="flex flex-row sm:flex-row gap-3 mt-6"
                 >
 
                     <ScrollToSectionButton
                         targetId="about-me"
-                        className="text-center py-2 px-8 border border-secondary rounded-xl text-secondary hover:bg-secondary hover:text-foreground hover:scale-105 hover:font-bold transition-all"
+                        className="text-center py-1 px-4 bg-secondary/25 border border-secondary/25 rounded-xl text-secondary hover:bg-secondary hover:text-foreground hover:scale-95 transition-all"
                     >
-                        <motion.div variants={item2Variants}>
+                        <div className='flex items-center gap-2 text-sm'>
+                            <BsPerson size="1.3em" />
                             Sobre Mí
-                        </motion.div>
+                        </div>
                     </ScrollToSectionButton>
 
                     <ScrollToSectionButton
                         targetId="study-cases"
-                        className="text-center py-2 px-8 border border-secondary rounded-xl text-secondary hover:bg-secondary hover:text-foreground hover:scale-105 hover:font-bold transition-all"
+                        className="text-center py-1 px-4 border border-secondary rounded-xl text-secondary hover:bg-secondary hover:text-foreground hover:scale-95 transition-all"
                     >
-                        <motion.div variants={item2Variants}>
+                        <div className='flex items-center gap-2 text-sm'>
+                            <FaCode size="1.3em" />
                             Proyectos
-                        </motion.div>
+                        </div>
                     </ScrollToSectionButton>
 
 
-                </motion.div>
+                </div>
             </div>
 
-            {/* Imagen ilustrativa en la segunda columna */}
-            <motion.div
-                id="hero-image"
-                className=""
-                variants={item2Variants}
-            >
-                <Image
-                    src="/img/imdamian_profile_img_v4.svg"
-                    alt="Ilustración del héroe"
-                    width={500}
-                    height={500}
-                    className="my-auto p-4"
-                />
-            </motion.div>
 
-        </motion.section>
+
+        </section>
     );
 };

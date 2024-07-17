@@ -1,11 +1,9 @@
 'use client'
-import { useState } from "react";
 
-import { titleFont } from "@/config/fonts";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
+import { useState } from "react";
+import { Navbar, NavbarContent, NavbarItem, Link, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "../theme-switch/ThemeSwitch";
-import { FramerMagnetic } from "../framer-magnetic/FramerMagnetic";
 
 export const NavBar = () => {
 
@@ -14,55 +12,37 @@ export const NavBar = () => {
     const { navItems } = siteConfig;
 
     return (
-        <Navbar isBlurred={false} maxWidth="lg" className="shadow-lg shadow-background" onMenuOpenChange={setIsMenuOpen}>
-            <NavbarBrand>
-                <Link href="/" className="flex flex-row items-baseline">
-                    <p className={`${titleFont.className} text-xl font-bold`}>ImDamian</p>
-                    <FramerMagnetic>
-                        <p className="text-xl font-semibold text-secondary">Dev</p>
-                    </FramerMagnetic>
-                </Link>
-            </NavbarBrand>
+        <Navbar isBlurred={false} maxWidth="lg" className="bg-transparent" onMenuOpenChange={setIsMenuOpen}>
 
-            <ThemeSwitch className="hover:scale-95 transition-all" />
-            
-            <NavbarMenuToggle
-                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                className="sm:hidden"
-            />
+            <NavbarContent className="flex h-fit py-2 px-6 mx-auto gap-3 rounded-full bg-primary/15 backdrop-blur-sm" justify="center">
 
-            <NavbarContent className="hidden sm:flex gap-5" justify="center">
                 <NavbarItem>
-                    <Link href="/" className="ml-3  hover:scale-95 transition-all">
-                        <span className="text-secondary font-bold mr-1">_</ span>
+                    <Link href="/" className="text-foreground text-sm hover:scale-95 transition-all">
                         Inicio
                     </Link>
                 </NavbarItem>
+
                 <NavbarItem>
-                    <Link href="#about-me" className="ml-3 hover:scale-95 transition-all">
-                        <span className="text-secondary font-bold mr-1">_</ span>
+                    <Link href="#about-me" className="text-foreground text-sm hover:scale-95 transition-all">
                         Sobre mí
                     </Link>
                 </NavbarItem>
+
+                <NavbarItem>
+                    <Link href="#about-me" className="text-foreground text-sm hover:scale-95 transition-all">
+                        Experiencia
+                    </Link>
+                </NavbarItem>
+
+                <NavbarItem>
+                    <Link href="#about-me" className="text-foreground text-sm hover:scale-95 transition-all">
+                        Contacto
+                    </Link>
+                </NavbarItem>
+
+                <ThemeSwitch className="hover:scale-95 transition-all" />
+
             </NavbarContent>
-
-
-            <NavbarMenu className="sm:hidden flex flex-col justify-center rounded-md pb-28 gap-y-8">
-                {navItems.map((item) => (
-                    <NavbarMenuItem key={`${item}`} className="flex bg-secondary/5 hover:bg-secondary/15 hover:scale-95 transition-all">
-                        <Link
-                            href={item.href}
-                            size="lg"
-                            className="w-full py-2 justify-center"
-                        >
-                            <span className="text-secondary font-bold mr-1">_</ span>
-                            <p className="text-xl">
-                                {item.label}
-                            </p>
-                        </Link>
-                    </NavbarMenuItem>
-                ))}
-            </NavbarMenu>
 
 
         </Navbar>

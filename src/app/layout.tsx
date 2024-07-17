@@ -4,7 +4,7 @@ import "./globals.css";
 import { inter } from "@/config/fonts";
 
 import { Providers } from "./providers";
-import { Aside, Footer, NavBar, ScrollToTopButton } from "@/components";
+import { Footer, NavBar, ScrollToTopButton } from "@/components";
 
 export const metadata: Metadata = {
   title: "ImDamianDev",
@@ -18,16 +18,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`dark:bg-gray-950 dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(27,104,141,0.3),rgba(15,23,42,0))] ${inter.className}`}>
         <Providers>
           <NavBar />
-          <main className="max-w-screen-lg mx-auto">
-            {children}
-            <Footer />
-          </main>
+            <main className="max-w-screen-lg mx-auto">
+              {children}
+              <Footer />
+            </main>
         </Providers>
         <ScrollToTopButton />
       </body>
-    </html>
+    </html >
   );
 }

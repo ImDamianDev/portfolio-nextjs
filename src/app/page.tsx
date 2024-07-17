@@ -1,18 +1,16 @@
-import { Hero, Works, ContactSection, Timeline} from "@/components";
+import { Hero, Works, ContactSection, Timeline } from "@/components";
 import { AboutMeSection } from "@/components/about/AboutMe";
 import { SkillsSection } from "@/components/about/Skills";
-import { sectionVariants } from "@/components/animations/Variants";
-import { motion } from "framer-motion";
 
 export default function HomePage() {
   return (
     <div className="min-h-screen m-0 p-0">
 
-      <Hero />
 
       <div
-        className="flex flex-col gap-8 px-6"
+        className="flex flex-col gap-16 px-6 mt-8"
       >
+        <Hero />
 
         {/* Introducción personal */}
         <AboutMeSection />

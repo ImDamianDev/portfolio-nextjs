@@ -1,32 +1,45 @@
-"use client"
 
+import Image from 'next/image';
 // Importacion de componentes
 import { TitleSection } from "./TitleSection"
-// Importación de animaciones
-import { motion } from "framer-motion";
-// Importacion de variantes de animacion personalizadas
-import { fadeIn, slideInFromLeft, sectionVariants } from '../animations/Variants';
+import { BsPerson } from 'react-icons/bs';
 
 export const AboutMeSection: React.FC = () => {
     return (
-        <motion.section
+        <section
             id="about-me"
-            variants={sectionVariants}
-            initial="hidden"
-            animate="visible"
+            className='grid sm:grid-cols-2 gap-8'
         >
-            <motion.div variants={slideInFromLeft}>
-                <TitleSection text="Sobre Mí" />
-            </motion.div>
+            {/* Descripción y enlaces en la primera columna */}
+            <div className="grid content-center">
+                
+                <div className='flex items-center mb-8 gap-3 text-secondary'>
+                    <BsPerson size="1.5em" />
+                    <TitleSection text="Sobre Mí" />
+                </div>
 
-            <motion.p variants={fadeIn} className="mb-3">
-                Ingeniero mecánico desde el 2015.
-            </motion.p>
+                <p className="dark:text-foreground/75 mb-3">
+                    Ingeniero mecánico desde el 2015.
+                </p>
 
-            <motion.p variants={fadeIn}>
-                En 2022, buscando nuevos conocimientos por curiosidad me inscribi en un bootcamp intensivo de JavaScript, donde descubrí lo esencial que es <strong className="text-secondary">programar</strong> como <strong className="text-secondary">habilidad</strong>. Desde entonces y aunque no siempre con la constancia que desearía he continuado aprendiendo cosas nuevas.
-            </motion.p>
+                <p className="dark:text-foreground/75 mb-3">
+                    En 2022, buscando nuevos conocimientos por curiosidad me inscribi en un <strong className="text-secondary/80 font-normal">bootcamp</strong> intensivo de <strong className="text-secondary/80 font-normal">JavaScript</strong>, donde descubrí lo esencial que es <strong className="text-secondary/80 font-normal">programar</strong> como una <strong className="text-secondary/80 font-normal">habilidad</strong>.
+                </p>
 
-        </motion.section>
+                <p className='dark:text-foreground/75 '>
+                    Desde entonces y aunque no siempre con la constancia que desearía continuo aprendiendo cosas nuevas.
+                </p>
+            </div>
+
+            {/* Imagen ilustrativa en la segunda columna */}
+            <Image
+                src="/img/imdamian_develope_img.svg"
+                alt="Ilustración del héroe"
+                width={500}
+                height={500}
+                className="my-auto mx-auto rounded-xl bg-primary/5"
+            />
+
+        </section>
     );
 };

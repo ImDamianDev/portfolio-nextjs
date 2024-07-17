@@ -6,7 +6,7 @@ interface SectionTitleProps {
 
 export const TitleSection: React.FC<SectionTitleProps> = ({ text, additionalClasses = '' }) => {
     return (
-        <h1 className={`text-xl font-bold mb-6 ${additionalClasses}`}>
+        <h1 className={`text-2xl font-bold ${additionalClasses}`}>
             {text}
         </h1>
     );
