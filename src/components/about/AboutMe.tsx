@@ -37,7 +37,7 @@ export const AboutMeSection: React.FC = () => {
                 alt="Ilustración del héroe"
                 width={500}
                 height={500}
-                className="my-auto mx-auto rounded-xl bg-primary/5"
+                className="my-auto mx-auto rounded-xl sm:p-8"
             />
 
         </section>
