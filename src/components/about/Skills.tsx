@@ -3,7 +3,7 @@
 import Image from 'next/image';
 // Importacion de componentes
 import { TitleSection } from "./TitleSection"
-import { BsPerson } from "react-icons/bs";
+import { FaPencilAlt } from 'react-icons/fa';
 
 export const SkillsSection: React.FC = () => {
     return (
@@ -13,7 +13,7 @@ export const SkillsSection: React.FC = () => {
             <div className="grid content-center sm:order-last">
 
                 <div className='flex items-center mb-8 gap-3 text-secondary'>
-                    <BsPerson size="1.5em" />
+                    <FaPencilAlt size="1.4em" />
                     <TitleSection text="Habilidades y Tecnologias" />
                 </div>
 

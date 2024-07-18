@@ -2,7 +2,7 @@
 import Image from 'next/image';
 // Importacion de componentes
 import { TitleSection } from "./TitleSection"
-import { BsPerson } from 'react-icons/bs';
+import { BsFillPersonFill } from 'react-icons/bs';
 
 export const AboutMeSection: React.FC = () => {
     return (
@@ -14,7 +14,7 @@ export const AboutMeSection: React.FC = () => {
             <div className="grid content-center">
                 
                 <div className='flex items-center mb-8 gap-3 text-secondary'>
-                    <BsPerson size="1.5em" />
+                    <BsFillPersonFill size="1.5em" />
                     <TitleSection text="Sobre Mí" />
                 </div>
 
