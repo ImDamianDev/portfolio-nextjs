@@ -1,25 +1,7 @@
-'use client'
-import { ContactForm, SectionTitle, SocialLink, TitleSection } from '@/components';
-import { Variants, motion } from 'framer-motion';
+
+import { ContactForm, SocialLink, TitleSection } from '@/components';
 import { PiNotebookDuotone } from 'react-icons/pi';
 
-const cardVariants: Variants = {
-  offscreen: {
-    y: 150,
-    rotate: 0,
-    opacity: 0,
-  },
-  onscreen: {
-    y: 0,
-    rotate: 0,
-    opacity: 100,
-    transition: {
-      type: "spring",
-      bounce: 0.5,
-      duration: 0.8
-    }
-  },
-};
 
 export const ContactSection = () => {
 
@@ -45,7 +27,7 @@ export const ContactSection = () => {
 
         </div>
 
-        <div id="contact-form" className='col-span-6 md:col-span-7 lg:col-span-6 mx-6 md:mx-0 lg:ml-6'>>
+        <div id="contact-form" className='col-span-6 md:col-span-7 lg:col-span-6 lg:ml-6'>
             <div className="w-full py-7 md:p-7 border-0 md:border-1 border-secondary rounded-lg md:shadow-lg shadow-secondary">
               <ContactForm />
             </div>
