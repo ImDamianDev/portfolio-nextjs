@@ -28,7 +28,7 @@ export const ContactSection = () => {
 
       <div id="contact-body" className='grid md:grid-cols-12 py-6 md:pb-16'>
 
-        <div id="contact-description" className='col-span-6 md:col-span-5 lg:col-span-6 pt-8 px-6 md:py-6 lg:p-0'>
+        <div id="contact-description" className='col-span-6 md:col-span-5 lg:col-span-6 pt-8 md:py-6 lg:p-0'>
 
           <div className='flex items-center mb-8 gap-3 text-secondary'>
             <PiNotebookDuotone size="1.5em" />

@@ -14,7 +14,7 @@ interface WorksCardProps {
 
 const WorksCard: React.FC<WorksCardProps> = ({ data }) => {
   return (
-    <div className="flex flex-col md:flex-row bg-secondary/10 mx-6 md:mx-0">
+    <div className="flex flex-col md:flex-row bg-primary/5">
 
       <div className="flex flex-col justify-around mb-3 p-4">
 
