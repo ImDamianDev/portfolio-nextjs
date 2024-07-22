@@ -1,7 +1,8 @@
 
-import { SectionTitle } from '@/components/ui/section-title/SectionTitle';
+import { TitleSection } from '@/components';
 import WorksCard from './WorksCard';
 import projects from '@/data/projectsData';
+import { PiNotebookDuotone } from 'react-icons/pi';
 
 // Definir la interfaz Project (asumida basada en tu estructura previa)
 interface Project {
@@ -15,10 +16,11 @@ interface Project {
 export const Works: React.FC = () => {
   return (
 
-    <div id="study-cases" className='lg:min-h-[90vh]'>
+    <div id="study-cases">
 
-      <div className='border-b-2 border-secondary w-fit ml-6 lg:ml-0 sticky top-17 my-12'>
-        <SectionTitle text="Casos de estudio" />
+      <div className='flex items-center mb-8 gap-3 text-secondary'>
+        <PiNotebookDuotone size="1.5em" />
+        <TitleSection text="Casos de estudio" />
       </div>
 
       <div id="hero-body" className='grid gap-12'>

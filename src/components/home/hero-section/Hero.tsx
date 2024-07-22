@@ -13,7 +13,7 @@ import Typed from 'typed.js';
 import { BsPerson } from 'react-icons/bs';
 import { FaCode } from 'react-icons/fa6';
 
-export const Hero = () => {
+export const HeroSection = () => {
     const typedRef = useRef(null);
 
     // Configuración de la animación de escritura con Typed.js

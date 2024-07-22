@@ -1,7 +1,7 @@
 
 import Image from 'next/image';
 // Importacion de componentes
-import { TitleSection } from "./TitleSection"
+import { TitleSection } from "@/components"
 import { BsFillPersonFill } from 'react-icons/bs';
 
 export const AboutMeSection: React.FC = () => {
