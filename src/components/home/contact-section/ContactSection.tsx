@@ -45,21 +45,10 @@ export const ContactSection = () => {
 
         </div>
 
-        <div id="contact-form" className='col-span-6 md:col-span-7 lg:col-span-6 mx-6 md:mx-0 lg:ml-6'>
-          <motion.div
-            className="w-full"
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: true, amount: 0.8 }}
-          >
-            <motion.div
-              variants={cardVariants}
-              className="w-full py-7 md:p-7 border-0 md:border-1 border-secondary rounded-lg md:shadow-lg shadow-secondary">
-
+        <div id="contact-form" className='col-span-6 md:col-span-7 lg:col-span-6 mx-6 md:mx-0 lg:ml-6'>>
+            <div className="w-full py-7 md:p-7 border-0 md:border-1 border-secondary rounded-lg md:shadow-lg shadow-secondary">
               <ContactForm />
-            </motion.div>
-
-          </motion.div>
+            </div>
         </div>
 
       </div>
