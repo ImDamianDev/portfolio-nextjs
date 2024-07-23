@@ -5,6 +5,7 @@ import { FramerMagnetic } from '../framer-magnetic/FramerMagnetic'; // Ajusta la
 type SocialLinkProps = {
     type: 'github' | 'linkedin' | 'mail';
     href: string;
+    text: string;
     size?: string | number; // Añadimos el parámetro size opcional
 };
 
@@ -14,14 +15,15 @@ const ICONS = {
     mail: IoMdMail,
 };
 
-export const SocialLink: React.FC<SocialLinkProps> = ({ type, href, size = '1em' }) => {
+export const SocialLink: React.FC<SocialLinkProps> = ({ type, href, text, size = '1em' }) => {
     const IconComponent = ICONS[type];
 
     return (
-        <FramerMagnetic>
-            <a href={href}>
+        <a href={href} className='flex items-center gap-2'>
+            <FramerMagnetic>
                 <IconComponent size={size} />
-            </a>
-        </FramerMagnetic>
+            </FramerMagnetic>
+            {text}
+        </a>
     );
 };

@@ -111,12 +111,12 @@ export const ContactForm = () => {
                 />
             </div>
 
-            <button className="flex mx-auto rounded-xl border-1 border-secondary py-2 px-7 hover:bg-secondary hover:font-bold hover:scale-105 transition-all" type="submit" disabled={loading}>
+            <button className="flex mx-auto rounded-lg border-1 border-secondary py-1.5 px-8 bg-secondary/10 hover:bg-secondary hover:scale-95 transition-all" type="submit" disabled={loading}>
                 {loading ? 'Enviando...' : 'Enviar'} {/* Mostrar estado de carga */}
             </button>
 
-            {error && <p className="text-red-500 mt-4">Error: {error}</p>} {/* Mostrar mensaje de error si existe */}
-            {success && <p className="text-green-500 mt-4">¡Mensaje enviado con exito!</p>} {/* Mostrar mensaje de éxito si el envío fue exitoso */}
+            {error && <p className="text-red-500 mt-8 text-center">Error: {error}</p>} {/* Mostrar mensaje de error si existe */}
+            {success && <p className="text-green-500 mt-8 text-center">¡Mensaje enviado con exito!</p>} {/* Mostrar mensaje de éxito si el envío fue exitoso */}
         </form>
     );
 }
