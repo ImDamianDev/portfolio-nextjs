@@ -29,7 +29,7 @@ export const ContactSection = () => {
         </div>
 
         <div id="contact-form" className='col-span-6 md:col-span-7 lg:col-span-6 lg:ml-6'>
-            <div className="w-full p-7 md:p-7 rounded-xl md:border-[1px] md:border-secondary dark:bg-[radial-gradient(ellipse_100%_100%_at_50%_-20%,rgba(27,104,141,0.3),rgba(15,23,42,0))]">
+            <div className="w-full px-4 py-6 rounded-xl md:border-[1px] md:border-secondary dark:bg-[radial-gradient(ellipse_100%_100%_at_50%_-20%,rgba(27,104,141,0.3),rgba(15,23,42,0))]">
               <ContactForm />
             </div>
         </div>

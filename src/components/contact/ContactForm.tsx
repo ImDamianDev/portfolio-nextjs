@@ -73,6 +73,7 @@ export const ContactForm = () => {
     return (
         <form onSubmit={handleSubmit} className="w-full max-w-[550px]">
             <div className="mb-4 flex flex-col w-full">
+
                 <label htmlFor="form-name">Nombre</label>
                 <input
                     id="form-name"
@@ -82,7 +83,7 @@ export const ContactForm = () => {
                     autoComplete="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="p-1 border-b-1 border-secondary bg-secondary bg-opacity-10 mt-1 mb-4"
+                    className="p-1 border-1 rounded-lg border-secondary bg-primary bg-opacity-10 mt-1 mb-4"
                     required // Asegurar que el campo es obligatorio
                 />
 
@@ -95,7 +96,7 @@ export const ContactForm = () => {
                     autoComplete="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="p-1 border-b-1 border-secondary bg-secondary bg-opacity-10 mt-1 mb-4"
+                    className="p-1 border-1 rounded-lg border-secondary bg-primary bg-opacity-10 mt-1 mb-4"
                     required // Asegurar que el campo es obligatorio
                 />
 
@@ -106,7 +107,7 @@ export const ContactForm = () => {
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
-                    className="p-1 border-b-1 border-secondary bg-secondary bg-opacity-10 mt-1 mb-4"
+                    className="p-1 border-1 rounded-lg border-secondary bg-primary bg-opacity-10 mt-1 mb-4"
                     required // Asegurar que el campo es obligatorio
                 />
             </div>
