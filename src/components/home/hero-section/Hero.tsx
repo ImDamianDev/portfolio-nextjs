@@ -5,13 +5,13 @@ import React, { useRef, useEffect } from 'react';
 // Importación de fuentes
 import { titleFont } from '@/config/fonts';
 // Importación de componentes
-import { ScrollToSectionButton } from '@/components';
+import { ScrollToSectionButton, SocialLink } from '@/components';
 // Importación de animaciones
 import Typed from 'typed.js';
 
 // Importación de iconos
-import { BsPerson } from 'react-icons/bs';
-import { FaCode } from 'react-icons/fa6';
+import { FaCode, FaLink, FaLinkedin } from 'react-icons/fa6';
+import Link from 'next/link';
 
 export const HeroSection = () => {
     const typedRef = useRef(null);
@@ -69,26 +69,8 @@ export const HeroSection = () => {
                     className="flex flex-row sm:flex-row gap-3 mt-6"
                 >
 
-                    <ScrollToSectionButton
-                        targetId="about-me"
-                        className="text-center py-1 px-4 bg-secondary/25 border border-secondary/25 rounded-xl text-secondary hover:bg-secondary hover:text-foreground hover:scale-95 transition-all"
-                    >
-                        <div className='flex items-center gap-2 text-sm'>
-                            <BsPerson size="1.3em" />
-                            Sobre Mí
-                        </div>
-                    </ScrollToSectionButton>
-
-                    <ScrollToSectionButton
-                        targetId="study-cases"
-                        className="text-center py-1 px-4 border border-secondary rounded-xl text-secondary hover:bg-secondary hover:text-foreground hover:scale-95 transition-all"
-                    >
-                        <div className='flex items-center gap-2 text-sm'>
-                            <FaCode size="1.3em" />
-                            Proyectos
-                        </div>
-                    </ScrollToSectionButton>
-
+                    <SocialLink type="mail" href="mailto:imdamian.dev@gmail.com" text="Contáctame" size="1.7em" className="px-3 py-1.5 text-foreground/90 rounded-xl border-1 border-primary bg-primary/10 hover:scale-95 transition-all duration-150"/>
+                    <SocialLink type="linkedin" href="https://www.linkedin.com/in/imdamian-dev/" text="LinkedIn" size="1.7em" className="px-3 py-1.5 text-foreground/90 rounded-xl border-1 border-primary bg-primary/10 hover:scale-95 transition-all duration-150"/>
 
                 </div>
             </div>

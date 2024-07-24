@@ -6,6 +6,7 @@ type SocialLinkProps = {
     type: 'github' | 'linkedin' | 'mail';
     href: string;
     text: string;
+    className?: string;
     size?: string | number; // Añadimos el parámetro size opcional
 };
 
@@ -15,11 +16,11 @@ const ICONS = {
     mail: IoMdMail,
 };
 
-export const SocialLink: React.FC<SocialLinkProps> = ({ type, href, text, size = '1em' }) => {
+export const SocialLink: React.FC<SocialLinkProps> = ({ type, href, text, className , size = '1em' }) => {
     const IconComponent = ICONS[type];
 
     return (
-        <a href={href} className='flex items-center gap-2'>
+        <a href={href} className={`flex items-center gap-2 ${className}`}>
             <FramerMagnetic>
                 <IconComponent size={size} />
             </FramerMagnetic>

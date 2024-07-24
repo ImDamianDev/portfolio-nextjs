@@ -19,7 +19,7 @@ const WorksCard: React.FC<WorksCardProps> = ({ data }) => {
 
       <Image
         alt="Relaxing app background"
-        className="z-0 w-full object-cover rounded-2xl h-[200px] md:h-full"
+        className="z-0 w-full object-cover rounded-2xl h-[200px] md:h-full md:max-w-[400px]"
         src={data.imgUrl}
         width={300}
         height={300}
@@ -34,7 +34,7 @@ const WorksCard: React.FC<WorksCardProps> = ({ data }) => {
         <p>{data.description}</p>
 
 
-        <div className="flex gap-6 mt-6 md:mb-0 md:w-80">
+        <div className="flex gap-3 mt-6 md:mb-0 md:w-80">
 
           <Link href={data.webUrl}
             className="flex gap-2 px-3 py-1.5 text-base rounded-xl border-1 border-primary bg-primary/10 hover:scale-95 transition-all duration-150"
