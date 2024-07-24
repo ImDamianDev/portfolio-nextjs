@@ -50,7 +50,7 @@ export const HeroSection = () => {
             {/* Descripción y enlaces en la primera columna */}
             <div className="sm:col-span-2 sm:ps-6 content-center">
 
-                <p className="mt-4 sm:m-0 text-xl">
+                <p className="mt-4 sm:m-0 text-2xl">
                     ¡Hola! Soy
                 </p>
 

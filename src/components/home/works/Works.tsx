@@ -23,7 +23,7 @@ export const Works: React.FC = () => {
         <TitleSection text="Casos de estudio" />
       </div>
 
-      <div id="hero-body" className='grid gap-12'>
+      <div id="hero-body" className='grid gap-16'>
 
         {projects.map((project: Project) => (
           <WorksCard key={project.repoUrl} data={project} />

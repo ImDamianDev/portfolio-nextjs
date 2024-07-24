@@ -1,6 +1,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { FaGithub, FaLink } from "react-icons/fa6";
 
 interface WorksCardProps {
   data: {
@@ -14,43 +15,47 @@ interface WorksCardProps {
 
 const WorksCard: React.FC<WorksCardProps> = ({ data }) => {
   return (
-    <div className="flex flex-col md:flex-row bg-primary/5">
+    <div className="flex flex-col md:flex-row md:bg-primary/5">
 
-      <div className="flex flex-col justify-around mb-3 p-4">
+      <Image
+        alt="Relaxing app background"
+        className="z-0 w-full object-cover rounded-2xl h-[200px] md:h-full"
+        src={data.imgUrl}
+        width={300}
+        height={300}
+      />
 
-        <h3 className="mb-3 text-lg font-semibold">
+      <div className="flex flex-col justify-around mb-3 pt-6 md:p-6">
+
+        <h3 className="mb-3 text-2xl text-secondary/90 font-semibold">
           {data.nameProject}
         </h3>
 
         <p>{data.description}</p>
 
 
-        <div className="flex gap-6 my-6 md:mb-0 md:w-80">
+        <div className="flex gap-6 mt-6 md:mb-0 md:w-80">
 
           <Link href={data.webUrl}
-            className="w-full md:w-1/2 py-2 text-center border border-secondary bg-secondary rounded-md text-foreground hover:bg-transparent hover:text-secondary hover:scale-105 hover:font-semibold transition-all"
+            className="flex gap-2 px-3 py-1.5 text-base rounded-xl border-1 border-primary bg-primary/10 hover:scale-95 transition-all duration-150"
 
           >
-            Ver Online
+            <FaLink size={"1.5em"} />
+            Vista Previa
           </Link>
 
           <Link href={data.repoUrl}
-            className="w-full md:w-1/2 py-2 text-center border border-secondary rounded-md text-secondary hover:bg-secondary hover:text-foreground hover:scale-105 hover:font-semibold transition-all"
+            className="flex gap-2 px-3 py-1.5 text-base rounded-xl border-1 border-primary bg-primary/10 hover:scale-95 transition-all duration-150"
           >
-            Ver Repositorio
+            <FaGithub size={"1.5em"} />
+            Repositorio
           </Link>
 
         </div>
 
       </div>
 
-      <Image
-        alt="Relaxing app background"
-        className="z-0 w-full object-cover clip-diagonal"
-        src={data.imgUrl}
-        width={300}
-        height={300}
-      />
+
     </div>
   );
 };
