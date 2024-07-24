@@ -6,7 +6,7 @@ import { PiNotebookDuotone } from 'react-icons/pi';
 export const ContactSection = () => {
 
   return (
-    <div id="contact-section">
+    <div id="contact">
 
       <div id="contact-body" className='grid md:grid-cols-12 py-6 md:pb-16'>
 

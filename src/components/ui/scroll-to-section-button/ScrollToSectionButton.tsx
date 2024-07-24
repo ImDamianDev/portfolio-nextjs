@@ -22,13 +22,13 @@ export const ScrollToSectionButton = ({ targetId, className = '', children }: Sc
     };
 
     return (
-        <div
+        <button
             id="scroll-to-section-button"
             role="button"
             onClick={scrollToSection}
             className={className}
         >
             {children}
-        </div>
+        </button>
     );
 }
